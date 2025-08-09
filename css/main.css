@@ -1,0 +1,39 @@
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.content {
+    padding-top: 0.4em;
+    padding-bottom: 0.8em;
+    border-bottom: 0.1em solid #ccc;
+}
+
+.page-title {
+    font-size: x-large;
+}
+
+.page-content {
+    padding-top: 0.4em;
+    color: gray;
+}
+
+.post-title {
+    font-size: large;
+}
+
+.post-excerpt {
+    color: gray;
+    padding-bottom: 0.8em;
+
+}
+
+.date {
+    font-size: small;
+}

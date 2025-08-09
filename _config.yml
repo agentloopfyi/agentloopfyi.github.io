@@ -1,0 +1,26 @@
+# Site settings
+title: zscore finance
+email: 
+description:  
+baseurl: ""
+url: "https://zscorefinance.github.io"
+linkedin_username: 
+github_username:  
+twitter_username:
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+include:
+ - _pages 
+
+collections:
+  somefolder:
+    output: true
