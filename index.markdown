@@ -34,7 +34,7 @@ layout: default
         </p>
         <p>⚠️ Content for educational purposes only — Not to be
             used for evaluating investments!</p>
-        <p><a href="/blog">Blogs</a></p>
+        <p><a href="/blog">Blog</a></p>
         <p><a href="#">Need help in running Facebook Ads and marketing campaigns?</a></p>
     </div>
 </div>
