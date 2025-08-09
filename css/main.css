@@ -16,24 +16,40 @@ body {
 }
 
 .page-title {
-    font-size: x-large;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .page-content {
     padding-top: 0.4em;
-    color: gray;
+    font-weight: 400;
 }
 
 .post-title {
-    font-size: large;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 .post-excerpt {
-    color: gray;
     padding-bottom: 0.8em;
-
+    font-weight: 400;
 }
 
 .date {
-    font-size: small;
+    font-size: 1em;
+    color: gray;
+    font-weight: 400;
+}
+
+/* code and pre */
+code {
+    border-radius: 0.2em;
+    padding: 0.2em;
+    ;
+    font-weight: 800;
+}
+
+pre {
+    border-radius: 0.2em;
+    font-weight: 800;
 }
