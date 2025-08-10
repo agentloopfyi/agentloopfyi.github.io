@@ -10,18 +10,18 @@ layout: default
 <div class="row content">
     <div class="col-md-6">
         <ul>
-            <li><a href="#">Financial statements analysis</a></li>
-            <li><a href="#">Growth investing</a></li>
-            <li><a href="#">Valuation and financial modelling</a></li>
-            <li><a href="#">Credit research</a></li>
+            <li><a href="/financial-statement-analysis">Financial statements analysis</a></li>
+            <li><a href="/growth-investing">Growth investing</a></li>
+            <li><a href="/valuation-and-financial-modelling">Valuation and financial modelling</a></li>
+            <li><a href="/credit-research">Credit research</a></li>
         </ul>
     </div>
     <div class="col-md-6">
         <ul>
-            <li><a href="#">Global news of interest in finance</a></li>
-            <li><a href="#">Artificial Intelligence</a></li>
-            <li><a href="#">Everything Trump said since his second term</a></li>
-            <li><a href="#">India's growth</a></li>
+            <li><a href="/global-finance-news">Global news of interest in finance</a></li>
+            <li><a href="/ai">Artificial Intelligence</a></li>
+            <li><a href="/trump">Things Trump said in his second term on trade, tariff and wars</a></li>
+            <li><a href="/growth-investing">India's growth</a></li>
         </ul>
     </div>
 </div>
