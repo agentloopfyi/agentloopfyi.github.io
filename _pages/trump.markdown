@@ -50,7 +50,18 @@ comment: false
 - **Peace Prize Claims:**  
   Trump stated he deserved the Nobel Peace Prize for brokering peace, specifically referencing India and Pakistan.
 
-#### Ongoing (2025)
+#### August 11–12, 2025:
+- Trump reiterated the US will maintain a 30% tariff on Chinese goods, with China reciprocating a 10% US goods tariff until at least November. He warned India of a new 25% tariff—plus an additional penalty for military and energy purchases from Russia.
+- Trump also said on social media that “any country participating in the anti-American policies of BRICS” will face an extra 10% tariff with "no exceptions," following BRICS’ criticism of his unilateral tariffs.
+
+#### August 15–16, 2025:
+- Trump announced upcoming tariffs on semiconductor imports, which could be as high as 300%, saying these are part of the next wave of his administration’s trade policy and would be unveiled "over the next couple of weeks" to "keep US technology secure and jobs at home.”
+
+#### August 17, 2025:
+- In a televised interview, Trump again claimed credit for averting a nuclear escalation between India and Pakistan earlier in the year, stating, "Wars are wars, but my first job is to save lives—even a nuclear conflict can be ended if you use leverage." He repeated that his use of tariffs, particularly threats to both sides, helped broker ceasefires not just in South Asia but in other global hot spots.
+- Trump further claimed he averaged "about one peace deal or ceasefire per month" during his second term, emphasizing his role in de-escalating recent regional conflicts—from Ukraine to Southeast Asia.
+
+#### Additionally (2025)
 - **100% Tariff Threat on BRICS:**  
   Throughout his term, Trump has threatened a 100% tariff against any BRICS nation advancing plans to create a rival currency to the US dollar, strongly criticizing the bloc’s move toward de-dollarization.
 
