@@ -1,18 +1,17 @@
 ---
-layout: page
-title: Things to check before putting a single Ruppee in stock market
-permalink: /checklist/
-includelink: true
-comment: false
+layout: post
+comments: false
+title:  "Checklist before putting a single Rupee in the stock market"
+date:   2025-09-15 10:00:00
 ---
 
-#### Should be familiar with <br />
+**✨ Should be familiar with**
 
 ✅ Nifty 50 website <br />
 ✅ Moneycontrol <br />
 ✅ Screener.in <br />
 
-#### ⚠️ Should check news and events in last 24-48 hours in<br />
+**✨ Should check news and events in last 24-48 hours in**
 
 ✅ Geopolitics <br />
 ✅ Domestic political news <br />

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 {% include head.html %}
-
 <body>
-  <br />
-  <br />
   <div class="container">
-    {{ content }} 
+    <div class="row">
+      <div class="col-12">
+        <h4 class="title">{{ site.title }}</h4>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="col-12">
+        <p><a href="/">Home</a>&nbsp;&nbsp;{% for page in site.pages %}
+          {% if page.title and page.includelink %}<a href="{{ page.url | prepend: site.baseurl }}">{{
+            page.title }}</a>&nbsp;&nbsp;{% endif %}
+          {% endfor %} 
+        </p>
+      </div>
+    </div>
+    {{ content }}
   </div>
-  <br />
+  {% include footer.html %}
 </body>
-
 </html>

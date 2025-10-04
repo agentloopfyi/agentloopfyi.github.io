@@ -1,9 +1,0 @@
----
-layout: post
-comments: false
-title:  "Finance 101"
-excerpt: "Finance is the study of how individuals, businesses, and governments manage money and other assets. Understanding finance helps you make informed decisions about spending, saving, investing, and borrowing. At its core, finance is about balancing risk and reward."
-date:   2025-08-08 10:00:00
----
-
-Finance is the study of how individuals, businesses, and governments manage money and other assets. Understanding finance helps you make informed decisions about spending, saving, investing, and borrowing. At its core, finance is about balancing risk and reward.

@@ -4,9 +4,6 @@ email:
 description:  
 baseurl: ""
 url: "https://zscorefinance.github.io"
-linkedin_username: 
-github_username:  
-twitter_username:
 
 # Build settings
 markdown: kramdown
