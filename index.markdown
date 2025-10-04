@@ -13,6 +13,7 @@ Here I write my opinionated views on things I am interested in — Mostly AI and
 Content published here may/may not be my own entirely. I read, research and observe.. collect knowledge from all sources.
 
 [Learn AI](/learn-ai)
+
 [Roadmap for Agentic AI](/agentic-ai)
 
 Created this "Bear Blog" like theme using plain CSS.
