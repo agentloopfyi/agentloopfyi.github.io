@@ -32,7 +32,7 @@ In my opinion, crafting agentic software depends mainly on five maturity areas..
 
 I followed this three step process myself.
 
-Step 1: Be an efficient software craftsman
+**✨ Step 1: Be an efficient software craftsman**
 
 ✅ <a href="/2025/10/04/gen-ai-benefits/">Stop thinking that AI is the answer to all your problems</a>
 
@@ -46,7 +46,7 @@ Step 1: Be an efficient software craftsman
 
 ✅ Read why LLMs are called probabilistic systems, use ChatGPT or Gemini and experiment with prompts
 
-**Step 2: Understand the building blocks**
+**✨ Step 2: Understand the building blocks**
 
 ✅ Start small; build a simple chatbot and experiment with different prompt techniques
 
@@ -59,7 +59,7 @@ Step 1: Be an efficient software craftsman
 ✅ Understand the economics of cloud computing
 
 
-**Step 3: Develop agents**
+**✨ Step 3: Develop agents**
 
 ✅ Build a system with two agents that interact with each other, define agent goals
 
@@ -73,4 +73,4 @@ Step 1: Be an efficient software craftsman
 
 ✅ Logging, monitoring, LLMOps and deployment
 
-✅ Dive deep into evals.
+✅ Dive deep into evals
