@@ -20,7 +20,7 @@ layout: default
         <ul>
             <li><a href="/global-finance-news">Global news of interest in finance</a></li>
             <li><a href="/ai">Artificial Intelligence</a></li>
-            <li><a href="/trump">Things Trump said in his second term on trade, tariff and wars</a></li>
+            <li><a href="/checklist">Things to check before putting a single Ruppee in stock market</a></li>
             <li><a href="/growth-investing">India's growth</a></li>
         </ul>
     </div>
