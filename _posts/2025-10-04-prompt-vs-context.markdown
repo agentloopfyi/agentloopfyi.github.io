@@ -9,9 +9,9 @@ LLMs hallucinate after ~30K tokens.
 
 Also, more tokens mean more money spent. 
 
-While prompts have been doing wonders with techniques like ReAct, chain of thoughts, etc, it is clear that while interaction with LLMs increase throughout the session or workflow, it is not really a practical option to put more and more messages and other relevant information in the prompt.
+While prompts have been doing wonders with techniques like ReAct, chain of thoughts, etc, it is clear as interaction with LLMs increase throughout the session or workflow, it is not really a practical option to put more and more messages and information in the prompt.
 
-Our intention must not only be to stay within the context window, but also keep it as concise as possible, making sure only the relevant and necessary information are sent to the LLM that it need to do its job.
+Our intention must not only be to stay within the context window, but also keep it as concise as possible, making sure only the relevant and necessary information are sent to the LLM that it needs to do its job.
 
 One technique that worked well for me in few of the agentic AI use cases that indeed went to production, was having "phases".
 
@@ -21,11 +21,11 @@ Let's say, there are 7 steps, which can be logically grouped into 2+2+3 steps. I
 
 At the end of step two, summarize all the messages exchanged with the user as notes on a "scractchpad". 
 
-You can use a intermediate "helper agent" that specifically uses a prompt to summarize the conversation into the scratchpad by compressing the conversation history while preserving the intent and important information collected.
+You can use an intermediate "helper agent" that specifically uses a prompt to summarize the conversation into the scratchpad by compressing the conversation history while preserving the intent and important information collected.
 
-Then the scratchpad becomes the input to the third step (not the entire conversation history). Step three onwards, you are not carrying around the load of the full conversation asn saving yourself lots of tokens.
+Then the scratchpad becomes the input to the third step (not the entire conversation history). Step three onwards, you are not carrying around the load of the full conversation and saving yourself lots of tokens.
 
-Also, later, you can always ask an agent to expand the "scratchpad" content into report or write an explanation.
+Also, later, you can always ask an agent to expand the "scratchpad" content into a report or write an explanation.
 
 This is truly "generative" as you may think, that we are compressing the conversation history onto a scratchpad (like a latent space, preserving the intent, sense and meaning), and then we generate entirely new content from the scratchpad by expanding it, and the new content has the same intent, sense and meaning.
 
