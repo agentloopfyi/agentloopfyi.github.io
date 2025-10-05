@@ -27,7 +27,7 @@ Then the scratchpad becomes the input to the third step (not the entire conversa
 
 Also, later, you can always ask an agent to expand the "scratchpad" content into report or write an explanation.
 
-This is truly "generative" as you may think, that we are compressing the conversation history onto a scratchpad (like a latent space, preserving the intent, sense and meaning), and then we generate entirely new content from the scratchpad by expanding it with the same intent, sense and meaning.
+This is truly "generative" as you may think, that we are compressing the conversation history onto a scratchpad (like a latent space, preserving the intent, sense and meaning), and then we generate entirely new content from the scratchpad by expanding it, and the new content has the same intent, sense and meaning.
 
 Scratchpads are also good opportunities to inject additional information that might provide relevant context to the LLMs in steps afterwards.
 
