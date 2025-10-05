@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title:  "Important things about the stock market"
-date:   2025-08-12 10:00:00
+date:   2025-02-11 10:00:00
 ---
 
 **✨ Why does the stock market exist?**
