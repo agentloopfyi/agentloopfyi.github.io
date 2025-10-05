@@ -72,3 +72,35 @@ Simple visualization of thing to do, things in progress and things done.
 Keep check on tasks in progress to reduce context switching.
 
 Review and rebalance.
+
+**💥 Few more techniques to manage personal time:**
+
+**✨️ 2-minute rule**
+
+1. Notice a quick task
+2. Takes less than 2 minutes?
+3. Do it immediately
+
+**✨️ Eat the frog**
+
+1. Find the most challenging task of the day
+2. Do it first thing in thr morning
+3. Repeat this every morning
+
+**✨️ Pomodoro technique:**
+
+1. Pick a task
+2. Give it continuous attention for 25 minutes
+3. Take 5 minutes break
+4. Again 25 minutes attention, repeat 4 times
+5. Take a longer break
+
+**✨️ Getting things done**
+
+1. Write down the task
+2. Is it actionable?
+3. Organize into right category or list
+4. Review periodically, has the right priority and expectations
+5. Engage, execute
+
+   
