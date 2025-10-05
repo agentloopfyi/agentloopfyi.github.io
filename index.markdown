@@ -16,6 +16,8 @@ Content published here may/may not be my own entirely. I read, research and obse
 
 ✨ [Roadmap for Agentic AI](/agentic-ai)
 
+✨ [Stock market checklist](/2025/09/15/checklist/)
+
 Created this "Bear Blog" like theme using plain CSS.
 
-Blog is powered by Jekyll and hosted on Github Pages.
+This blog is powered by Jekyll and hosted on Github Pages.
