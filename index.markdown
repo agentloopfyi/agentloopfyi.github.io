@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Here I write my opinionated views on things I am interested in.
+Writing my opinionated views on things I am interested in.
 
 ✨ [Learn AI](/learn-ai) — Collecting some awesome content on AI.
 
