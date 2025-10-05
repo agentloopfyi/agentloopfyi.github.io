@@ -6,17 +6,15 @@ Hi there! My name is Saurav Dey.
 
 I am an AI Engineer by profession. I build (and consult on) agentic AI software systems. [Contact](/contact)
 
-This is my personal website.
+This is my personal website and blog.
 
-Here I write my opinionated views on things I am interested in — Mostly AI and finance.
+Here I write my opinionated views on things I am interested in — Could be anything.
 
-Content published here may/may not be my own entirely. I read, research and observe.. collect knowledge from all sources.
+I read, research and observe.. love to collect knowledge from just about any source.
 
-✨ [Learn AI](/learn-ai)
+✨ [Learn AI](/learn-ai) — Collecting some awesome content on AI.
 
-✨ [Roadmap for Agentic AI](/agentic-ai)
-
-✨ [Stock market checklist](/2025/09/15/checklist/)
+✨ [Roadmap for Agentic AI](/agentic-ai) — If you're learning agentic AI, take a look here.
 
 Created this "Bear Blog" like theme using plain CSS.
 
