@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title:  "What will benefit from GenAI and take off..."
-date:   2025-10-04 10:00:00
+date:   2025-10-02 10:00:00
 ---
 
 Everyone wants to build agents today. But does it make sense? How do you know that you really need GenAI to solve a problem? What will sustain? ..And what is just a fad?
