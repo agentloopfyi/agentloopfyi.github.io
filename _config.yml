@@ -1,9 +1,10 @@
 # Site settings
-title: Saurav's blog
+title: "Saurav's blog"
 email: 
 description:  
 baseurl: ""
 url: "https://whattheblog.github.io"
+footnote: "Saurav Dey"
 
 # Build settings
 markdown: kramdown
