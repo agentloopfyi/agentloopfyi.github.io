@@ -1,1 +1,1 @@
-𝕏 @zscorefinance
+https://whattheblog.github.io
