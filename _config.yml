@@ -4,7 +4,7 @@ email:
 description:  
 baseurl: ""
 url: "https://whattheblog.github.io"
-footnote: "Saurav Dey"
+footnote: "Saurav Dey © 2025"
 
 # Build settings
 markdown: kramdown
