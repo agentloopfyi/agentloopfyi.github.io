@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-title:  "Checklist before putting a single Rupee in the stock market"
+title:  "Checklist before putting even a single Rupee in the stock market"
 date:   2025-09-15 10:00:00
 ---
 
