@@ -62,7 +62,7 @@ I am collecting some awesome AI, math and related content from blogs, websites, 
 
 - [Game Theory - Yale](https://www.youtube.com/watch?v=M3oWYHYoBvk)
         
-  Not AI:
+Not AI:
 
 - [CMU Database Systems](https://www.youtube.com/playlist?list=PLSE8ODhjZXja3hgmuwhf89qboV1kOxMx7)
     
