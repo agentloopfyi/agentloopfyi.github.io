@@ -34,7 +34,7 @@ I followed this three step process myself.
 
 **✨ Step 1: Be an efficient software craftsman**
 
-✅ <a href="/2025/10/04/gen-ai-benefits/">Stop thinking that AI is the answer to all your problems</a>
+✅ <a href="/2025/07/22/gen-ai-benefits/">Stop thinking that AI is the answer to all your problems</a>
 
 ✅ Be part of, or develop an excellent engineering culture
 
@@ -63,7 +63,7 @@ I followed this three step process myself.
 
 ✅ Build a system with two agents that interact with each other, define agent goals
 
-✅ Optimize tokens by engineering agent context!
+✅ Optimize tokens by <a href="/2025/10/04/prompt-vs-context/">engineering agent context</a>!
 
 ✅ Learn structured inputs, structured outputs and guardrails
 
