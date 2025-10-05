@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title:  "Low stress decision making"
-date:   2025-10-05 10:00:00
+date:   2025-01-02 10:00:00
 ---
 
 Think faster and take decisions without additional stress.
