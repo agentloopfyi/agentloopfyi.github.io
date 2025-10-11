@@ -20,7 +20,7 @@ date:   2025-02-11 10:00:00
 ✅ You don't make money by trading throughout the day or week or month <br />
 ✅ Identify good businesses and use power of compounding  <br />
 ✅ Understand the business well, their products, services, how they make money, their managers, leaders, raw materials, suppliers, supply chain, markets, consumers, etc <br />
-✅ "Smart Money" is money that belongs to FII, DII and other rich institution or people <br />
+✅ "Smart Money" is money that belongs to FII, DII and other rich institution or super rich people (not retail traders) <br />
 ✅ Growth stocks don't usually give dividends; such businesses re-invest the whole profit for further growth <br />
 ✅ Get knowledge of economy, sector and businesses <br />
 ✅ Understand financial statements, ratios and indicators <br />
