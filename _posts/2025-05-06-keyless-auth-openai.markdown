@@ -11,7 +11,16 @@ API keys are like disasters waiting to happen. Someone might share it on email, 
 
 Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/). (custom sub-domain)
 
-## Using LangChain and LangGraph
+When running agents locally on a workstation 
+
+```powershell
+az login --scope https://management.core.windows.net//.default
+
+az login --scope https://cognitiveservices.azure.com/.default
+
+```
+
+#### Using LangChain and LangGraph
 
 ```python
 from azure.identity import AzureCliCredential, get_bearer_token_provider
@@ -49,7 +58,7 @@ def get_embedding_model() -> AzureOpenAIEmbeddings:
 
 ```
 
-## Using OpenAI Agents SDK
+#### Using OpenAI Agents SDK
 
 ```python
 from azure.identity import AzureCliCredential, get_bearer_token_provider
@@ -78,3 +87,5 @@ openai_client = AsyncAzureOpenAI(
 set_default_openai_client(openai_client, use_for_tracing=False)
 
 ```
+
+Running on a cloud environment need an Azure service principal.
