@@ -5,6 +5,7 @@ description:
 baseurl: ""
 url: "agentloop.fyi"
 footnote: "Saurav Dey © 2025"
+linkedin: "https://www.linkedin.com/in/sauravdey"
 
 # Build settings
 markdown: kramdown
