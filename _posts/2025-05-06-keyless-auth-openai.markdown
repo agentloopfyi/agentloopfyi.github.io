@@ -9,7 +9,7 @@ API keys are like disasters waiting to happen. Someone might share it on email, 
 
 [Using Keyless Auth with Azure AI Services by Microsoft](https://www.youtube.com/watch?v=IkDcQvKoQ8k) by Pamela Fox and Marlene Mhangami.
 
-Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/). on custom sub-domains.
+Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/) on custom sub-domains.
 
 #### When running agents locally on a workstation 
 
