@@ -1,18 +1,80 @@
 ---
 layout: post
 comments: false
-title:  "Factors that create speculative bubbles"
+title:  "Keyless authentication with Azure Open AI"
 date:   2025-05-06 10:00:00
 ---
 
-Financial markets, often perceived as bastions of rational decision-making and efficient resource allocation, are, in reality, complex ecosystems profoundly influenced by human psychology and collective behavior. While fundamental analysis and economic indicators are crucial drivers, history repeatedly demonstrates that periods of irrational exuberance can lead to significant deviations from intrinsic value. This phenomenon, commonly known as a speculative bubble, and its intricate relationship with stock market price anomalies, forms the core subject of this project report. Understanding the intricate relationship between these two phenomena is crucial in navigating the complexities of modern financial markets, especially in light of recent volatile events. This report aims to dissect this relationship, providing a detailed analysis with a specific focus on the Indian stock market and its benchmark index, the NIFTY.
+API keys are like disasters waiting to happen. Someone might share it on email, chat or write it down, meaning the key may get compromised. Then, you end up with a big bill because of a compromised key.
 
-**The Human Element: Greed and Fear in Financial Markets**
+[Using Keyless Auth with Azure AI Services by Microsoft](https://www.youtube.com/watch?v=IkDcQvKoQ8k).
 
-In my view, one cannot truly understand market movements without acknowledging the powerful, often irrational, forces of human emotion. Traditional financial theories often assume investors are rational actors, but behavioral finance offers a more realistic lens, highlighting how emotions like greed and fear profoundly impact investment decisions. Greed, manifesting as the "fear of missing out" (FOMO), drives investors to chase rising prices, often without a thorough understanding of an asset's underlying value. This overconfidence can lead to excessive buying and inflated prices, pushing valuations far beyond what fundamentals justify. Conversely, fear can trigger panic selling, causing sharp market downturns even in the absence of significant fundamental deterioration. The behavioral bias of loss aversion, for instance, can cause investors to hold onto overvalued assets for too long, fearing to realize losses, which can exacerbate their financial distress when the bubble finally bursts. These powerful emotions create a fertile ground for speculative activities, distorting price discovery and leading to significant market inefficiencies.  
+Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/). (custom sub-domain)
 
-**Speculative Bubbles: Inflating and Bursting Stock Prices**
+## Using LangChain and LangGraph
 
-From my perspective, speculative bubbles are perhaps the most dramatic manifestation of collective irrationality in financial markets. They are characterized by a sharp and considerable increase in asset values, whether in a specific industry, commodity, or an entire asset class, that is not justified by the assets' fundamental or intrinsic worth. Instead, prices are primarily propelled by investor optimism, euphoria, and the expectation of further price increases, often referred to as "market sentiment and momentum". This type of valuation spike, initially perhaps spurred by implied growth, is inherently unsustainable, inevitably leading to a sharp decline once it reaches its peak. The prices of assets within a speculative bubble become inflated beyond their intrinsic value, fueled by the belief that prices will continue to rise indefinitely. This self-reinforcing cycle directly impacts stock prices by creating unsustainable highs, drawing in more investors who are attracted to exaggerated expectations of future growth and price appreciation. When these bubbles eventually burst, often sparked by a crisis, they trigger market crashes, resulting in substantial and often permanent losses for investors.  
+```python
+from azure.identity import AzureCliCredential, get_bearer_token_provider
 
-[Continued...](/2025/06/17/behaviour-influencing-markets2/)
+from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
+
+import os
+
+
+credential = AzureCliCredential(subscription=os.environ['AZURE_SUBSCRIPTION'])
+token_provider = get_bearer_token_provider(credential, os.environ['AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT'])
+
+
+def get_llm() -> AzureChatOpenAI:
+    llm = AzureChatOpenAI(
+        azure_ad_token_provider=token_provider,
+        azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'],
+        azure_deployment=os.environ['OPENAI_DEPLOYMENT'],
+        openai_api_version=os.environ['OPENAI_API_VERSION'],
+    )
+
+    return llm
+
+
+def get_embedding_model() -> AzureOpenAIEmbeddings:
+    embedding_generator = AzureOpenAIEmbeddings(
+        azure_ad_token_provider=token_provider,
+        azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'],
+        azure_deployment=os.environ['EMBEDDING_MODEL'],
+        openai_api_version=os.environ['EMBEDDING_API_VERSION']
+    )
+
+    return embedding_generator
+
+
+```
+
+## Using OpenAI Agents SDK
+
+```python
+from azure.identity import AzureCliCredential, get_bearer_token_provider
+from openai import AsyncAzureOpenAI
+
+import os
+
+
+api_version=os.environ['OPENAI_API_VERSION']
+deployment=os.environ['OPENAI_DEPLOYMENT']
+endpoint=os.environ['AZURE_OPENAI_ENDPOINT']
+
+
+credential = AzureCliCredential(subscription=os.environ['AZURE_SUBSCRIPTION'])
+token_provider = get_bearer_token_provider(credential, os.environ['AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT'])
+
+
+openai_client = AsyncAzureOpenAI(
+    api_version=api_version,
+    azure_endpoint=endpoint,
+    azure_ad_token_provider=token_provider,
+    azure_deployment=deployment,    
+)
+
+
+set_default_openai_client(openai_client, use_for_tracing=False)
+
+```
