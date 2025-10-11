@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Writing my opinionated views on things I am interested in.
+Hi there! I am Saurav, writing my opinionated views here, on things I am interested in, mostly Agentic AI.
 
 ✨ [Learn AI](/learn-ai) — Collecting some awesome content on AI.
 
