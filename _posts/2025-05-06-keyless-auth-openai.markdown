@@ -7,11 +7,11 @@ date:   2025-05-06 10:00:00
 
 API keys are like disasters waiting to happen. Someone might share it on email, chat or write it down, meaning the key may get compromised. Then, you end up with a big bill because of a compromised key.
 
-[Using Keyless Auth with Azure AI Services by Microsoft](https://www.youtube.com/watch?v=IkDcQvKoQ8k).
+[Using Keyless Auth with Azure AI Services by Microsoft](https://www.youtube.com/watch?v=IkDcQvKoQ8k) by Pamela Fox and Marlene Mhangami.
 
-Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/). (custom sub-domain)
+Just in case you're getting a "badly formatted request error" from the OpenAI service, see this article by [Luke Murray](https://luke.geek.nz/azure/openai-request-badly-formatted/). on custom sub-domains.
 
-When running agents locally on a workstation 
+#### When running agents locally on a workstation 
 
 ```powershell
 az login --scope https://management.core.windows.net//.default
@@ -88,4 +88,4 @@ set_default_openai_client(openai_client, use_for_tracing=False)
 
 ```
 
-Running on a cloud environment need an Azure service principal.
+#### Running on a cloud environment need an Azure service principal.
