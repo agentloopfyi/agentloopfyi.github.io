@@ -16,3 +16,29 @@ Think faster and take decisions without additional stress.
 7. Don't revert a decision without knowing why it was taken.
 
 👋
+
+
+#### Important law's to remember while making decisions
+
+1️⃣ Murphy's law
+
+> Anything that can go wrong, will go wrong! The more your fear something hapenning, the more likely it is to occur.
+
+2️⃣ Kidlin's law
+
+> If you write a problem down clearly and specifically, you've solved half if it.
+
+3️⃣ Gilbert's law
+
+> No one will ever tell you how to succeed. It's your job to figure it out. When you take on a task, finding the best way to achieve the desired result is always your responsibility.
+
+4️⃣ Wilson's law
+
+> Priotize knowledge and intelligence. Money will follow.
+
+5️⃣ Falkland's law
+
+> If it isn't necessary to make a decision yet, it's necessary not to make one.
+
+
+4️⃣
