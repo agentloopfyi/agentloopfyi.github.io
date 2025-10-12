@@ -73,4 +73,4 @@ I followed this three step process myself.
 
 ✅ Logging, monitoring, LLMOps and deployment
 
-✅ Dive deep into evals
+✅ Dive deep into evals (Evaluation of how the agents are performing!) - LLM as judge is a popular technique.
