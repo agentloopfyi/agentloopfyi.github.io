@@ -5,7 +5,7 @@ title:  "How to prioritize what matters and live a sane life"
 date:   2025-08-09 10:00:00
 ---
 
-Most things we deal with everyday are just noise.
+**Most things we deal with everyday are just noise.**
 
 It's important to separate the signal from the noise. Signals are what brings the value.
 
@@ -13,7 +13,7 @@ Noise are what drains your energy and drives you crazy.
 
 Therefore it's important to prioritize things by cutting the noise and picking the signals.
 
-Few proven ways to do it:
+**Few proven ways to do it:**
 
 **✨️ MoSCoW method**
 
