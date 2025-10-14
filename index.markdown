@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Hi there! I am Saurav, writing my opinionated views here, on things I am interested in, mostly Agentic AI and (the hard and soft skills of) software engineering.
+Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">Saurav</a>, writing my opinionated views here, on things I am interested in, mostly Agentic AI and (the hard and soft skills of) software engineering.
 
 ✨ [Learn AI](/learn-ai) — Collecting some awesome content on AI.
 
