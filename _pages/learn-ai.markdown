@@ -12,7 +12,7 @@ I am collecting some awesome AI, math and related content from blogs, websites, 
 
 - [MCP for beginners by Microsoft](https://www.youtube.com/watch?v=VfZlglOWWZw&list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d)
 
-- [LLMOps](https://www.youtube.com/playlist?list=PLtWcg4BQh8pql594XFXz3TBSVVLebnzcn)
+- [Learn LLMOps by TechLeadCompass](https://www.youtube.com/playlist?list=PLtWcg4BQh8pql594XFXz3TBSVVLebnzcn)
 
 - [Generative AI in a nutshell by Henrik Kniberg](https://www.youtube.com/watch?v=2IK3DFHRFfw&t=585s)
   
