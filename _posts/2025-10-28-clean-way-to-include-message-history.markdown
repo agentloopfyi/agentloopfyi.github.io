@@ -61,7 +61,7 @@ def agent_node(state: AgentState) -> AgentState:
 
 ```
 
-Using `get_buffer_string` with include the conversation in a way that the LLM usually can interpret better as a series of human and AI messages.
+Using `get_buffer_string` will include the conversation in a way that the LLM usually can interpret better as a series of human and AI messages.
 
 The system prompt will look like:
 
