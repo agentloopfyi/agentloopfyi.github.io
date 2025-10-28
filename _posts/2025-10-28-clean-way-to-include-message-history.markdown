@@ -7,7 +7,7 @@ date:   2025-10-28 10:00:00
 
 LangGraph is my go-to framework for building graph-based agentic workflows involving multiple agents.
 
-Oftentimes, you need to facilitate a conversation between the user and the LLM and make sure the conversation history is retained in every subsequent calls.
+Oftentimes, you need to facilitate a conversation between the user and the LLM and make sure the conversation history is retained for every subsequent calls.
 
 Therefore every time you make a call the the LLM API, in one way or the other you need to include the messages history in the payload, as a sequence of human and AI messages.
 
@@ -72,7 +72,7 @@ You are an expert in this and that.
 - blah
 - blah
 
-These are the messages that have been exchanged so far with the stakeholder asking for different specifications:
+These are the messages that have been exchanged so far with the user:
 <Messages>
 Human: ....
 AI: ....
@@ -86,4 +86,4 @@ AI: ....
 
 ```
 
-As a developer, you get a cleaner approach, that you can log and visually understand as simple text in sequence with role, rather than logging the list of message objects.
+As a developer, you get a cleaner approach, that you can log and visually understand as simple sentences in sequence with role, rather than logging the list of message objects.
