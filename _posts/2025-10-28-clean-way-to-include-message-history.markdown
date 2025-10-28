@@ -55,7 +55,7 @@ def agent_node(state: AgentState) -> AgentState:
 
   # Update state
   return {
-    "messages": [AIMessage(content=result["messages"][-1].content)]
+    "messages": [AIMessage(content=llm_response["messages"][-1].content)]
   }
 
 ```
