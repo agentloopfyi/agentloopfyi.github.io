@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-title:  "Clean (LangGraph) way to include message history into prompt when making LLM API calls"
+title:  "Clean (LangGraph) way to include message history into the prompt when making LLM API calls"
 date:   2025-10-28 10:00:00
 ---
 
