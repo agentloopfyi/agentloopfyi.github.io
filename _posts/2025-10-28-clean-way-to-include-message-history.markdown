@@ -40,7 +40,7 @@ def agent_node(state: AgentState) -> AgentState:
  - blah
  - blah
  
- These are the messages that have been exchanged so far with the stakeholder asking for different specifications:
+ These are the messages that have been exchanged so far with the user:
  <Messages>
  {messages}
  </Messages>
