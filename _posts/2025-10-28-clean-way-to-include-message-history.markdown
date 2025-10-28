@@ -28,35 +28,36 @@ Then, just before calling your agent, which is basically an LLM call with a spec
 
 ```python
 from langchain_core.messages import (
-    SystemMessage,
-    get_buffer_string,
+ SystemMessage,
+ AIMessage,
+ get_buffer_string,
 )
 
 def agent_node(state: AgentState) -> AgentState:
-  AGENT_PROMPT = """You are an expert in this and that.
+ AGENT_PROMPT = """You are an expert in this and that.
   
-  **Your tasks:**
-  - blah
-  - blah
-  
-  These are the messages that have been exchanged so far with the stakeholder asking for different specifications:
-  <Messages>
-  {messages}
-  </Messages>
-  """
-  
-  SYSTEM_MESSAGE = SystemMessage(
-    content=AGENT_PROMPT.format(
-      messages=get_buffer_string(state["messages"]),
-    )
+ **Your tasks:**
+ - blah
+ - blah
+ 
+ These are the messages that have been exchanged so far with the stakeholder asking for different specifications:
+ <Messages>
+ {messages}
+ </Messages>
+ """
+ 
+ SYSTEM_MESSAGE = SystemMessage(
+  content=AGENT_PROMPT.format(
+    messages=get_buffer_string(state["messages"]),
   )
-  
-  llm_response = get_agent().invoke([SYSTEM_MESSAGE])
-
-  # Update state
-  return {
-    "messages": [AIMessage(content=llm_response["messages"][-1].content)]
-  }
+ )
+ 
+ llm_response = get_agent().invoke([SYSTEM_MESSAGE])
+ 
+ # Update state
+ return {
+  "messages": [AIMessage(content=llm_response["messages"][-1].content)]
+ }
 
 ```
 
