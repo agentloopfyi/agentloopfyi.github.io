@@ -9,7 +9,7 @@ LangGraph is my go-to framework for building graph-based agentic workflows invol
 
 Oftentimes, you need to facilitate a conversation between the user and the LLM and make sure the conversation history is retained for every subsequent calls.
 
-Therefore every time you make a call the the LLM API, in one way or the other you need to include the messages history in the payload, as a sequence of human and AI messages.
+Therefore every time you make a call to the the LLM API, in one way or the other you need to include the messages history in the payload, as a sequence of human and AI messages.
 
 In LangGraph we keep messages in the state, which might look something like:
 
