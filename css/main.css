@@ -34,7 +34,7 @@ a:hover {
 .page-title {
     font-size: 1.4em;
     font-weight: 600;
-    color: #816797;
+    color: #1F51FF;
 }
 
 .footer {
@@ -45,7 +45,7 @@ a:hover {
 .date {
     font-size: 1em;
     font-family: Consolas, "Courier New", monospace;
-    color: #51557E;
+    color: black;
 }
 
 @media (min-width: 1200px) {
