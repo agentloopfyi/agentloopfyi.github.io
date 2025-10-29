@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-title:  "Clean (LangGraph) way to include message history into the prompt when making LLM API calls"
+title:  "Include message history into the system prompt"
 date:   2025-10-28 10:00:00
 ---
 
