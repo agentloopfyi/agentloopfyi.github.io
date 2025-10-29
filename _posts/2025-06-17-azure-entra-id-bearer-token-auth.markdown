@@ -13,7 +13,7 @@ Application authentication meaning, your application exposes APIs to other apps 
 
 How do you set this up?
 
-### Setting up application registration and client secrets
+**Setting up application registration and client secrets**
 
 Log into the Azure portal and go to app registraion.
 
@@ -29,7 +29,7 @@ Click `Overview` → Set a meaningful Application ID URI, in dev we have set it 
 
 That means, for each external application that wants to consume your API, you need to create a client secret.
 
-### How to get a token (this process to be followed by the external application to get a token from Azure Entra)
+**How to get a token (this process to be followed by the external application to get a token from Azure Entra)**
 
 Gather following info from your Azure Entra app registration both available on the Overview page of the app registration. 
 
@@ -57,7 +57,7 @@ Same way, by invoking this API, the external consumer will get an `access_token`
 
 Using the `access_token` as `Bearer cccc` in `Authorization` header, the external consumer will make API calls to your application.
 
-### How do you verify the token
+**How do you verify the token**
 
 The token was generated from your app registration in Entra by the external app, and they sent the token in Authentication header as a bearer token when they invoked one of your APIs.
 
