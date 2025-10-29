@@ -2,7 +2,7 @@ body {
   /* background-color: #232429; */
   background-image: linear-gradient(to right, rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.4)), url('bg-tint.png');
   background-size: cover;
-  color: white;
+  color: black;
   padding: 2em;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -19,7 +19,8 @@ body {
 
 a {
   text-decoration: none; 
-  color: #816797;
+  /* color: #816797; */
+  color: #1F51FF;
 }
 
 a:hover {
