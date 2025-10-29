@@ -48,6 +48,12 @@ a:hover {
     color: black;
 }
 
+.face-img {
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+}
+
 @media (min-width: 1200px) {
     .container{
         max-width: 50%;
