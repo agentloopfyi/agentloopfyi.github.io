@@ -1,7 +1,7 @@
 body {
-  background-color: #232429;
-  /* background-image: linear-gradient(to right, rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.4)), url('bg-tint.png');
-  background-size: cover; */
+  /* background-color: #232429; */
+  background-image: linear-gradient(to right, rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.4)), url('bg-tint.png');
+  background-size: cover;
   color: white;
   padding: 2em;
   font-family: "Roboto", sans-serif;
