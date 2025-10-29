@@ -16,4 +16,5 @@ Having spent 12+ years in the industry, I currently work as an AI Engineer and s
 
 **Academic credentials:**
 - Completed an online program in reinforcement learning from IISc Bangalore (2025)
+- PGDM in Finance from AIMA New Delhi (2025)
 - Completed BTech in Computer Science and Engineering from West Bengal University of Technology, Kolkata (2013)
