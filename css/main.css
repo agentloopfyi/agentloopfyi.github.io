@@ -51,11 +51,11 @@ a:hover {
     width: 20em;
 }
 
-.pre {
+pre {
   border-radius: 1em;
 }
 
-.code {
+code {
   background-color: black !important;
   color: white !important;
 }
