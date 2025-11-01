@@ -65,6 +65,11 @@ How do you verify? You need to obtain the public keys from Entra, using which yo
 
 You need a middleware. For example in Node.js you can create a simple middleware like below:
 
+```bash
+# Dependencies
+npm i jsonwebtoken axios
+```
+
 ```javascript
 const axios = require('axios').default;
 const jwt = require('jsonwebtoken');
@@ -133,10 +138,96 @@ exports.checkAuthToken = async (req, res, next) => {
 7. Verify using well formed signed key and algorithm
 8. Verify token is not expired and audience match (Audience match is not mandatory, added just as additional check)
 
-**Note**:
-
-This article shows how to establish application to application integration using `access_tokens` from Azure Entra. 
+Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. 
 This method doesn't have any user credentials involved in this.
 
 If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. 
 In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.
+
+If you are using Azure Entra ID (earlier known as Azure Active Directory), then you can best use MSAL.js to authenticate users to your application and you will get the `id_token`, along with `acess_token` and `refresh_token`.
+
+You can use the `access_token` on behalf of the user to call the Graph API, like `https://graph.microsoft.com/oidc/userinfo` to get user info back. You can also use the `/me` API.
+
+However, when you are making calls to your own backend APIs on behalf of the user, then from your front-end app you need to add the `Authentication` header in the API call and pass the `id_token` as `Bearer <id token>`.
+
+Then you need a similar middleware that will intercept the API calls and validate the `id_token` against the public keys.
+
+Working code in Python, shown as below:
+
+```bash
+# Dependencies
+uv add pyjwt[crypto] httpx async-lru
+```
+
+```python
+import httpx
+import jwt
+import asyncio
+from async_lru import alru_cache
+
+from cryptography.x509 import load_pem_x509_certificate
+from cryptography.hazmat.backends import default_backend
+
+tenantID = 'your tenant ID'
+clientID = 'your client ID'
+
+X509_CERT_TEMPLATE = """
+-----BEGIN CERTIFICATE-----
+{x509_cert}
+-----END CERTIFICATE-----
+"""
+
+@alru_cache
+async def _get_entra_public_keys() -> list:
+    entra_public_keys_endpoint = f'https://login.microsoftonline.com/{tenantID}/discovery/keys?appid={clientID}'
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get(entra_public_keys_endpoint)
+        if response.status_code == 200:
+            _response = response.json()
+            return _response['keys'] or []
+        else:
+            # End of the world exception :P
+            raise Exception("Entra public keys not available")
+
+
+async def validate_token(id_token) -> bool:
+    public_keys: list = await _get_entra_public_keys() 
+    header = jwt.get_unverified_header(id_token)
+    kid = header.get('kid')
+    alg = header.get('alg')
+
+    x509_cert = None
+    for key in public_keys:
+        if key['kid'] == kid:
+            x509_cert = key
+
+    formed_cert = X509_CERT_TEMPLATE.format(x509_cert=x509_cert['x5c'][0]).strip()
+
+    try:
+        loaded_cert = load_pem_x509_certificate(formed_cert.encode(), default_backend())
+
+        decoded_payload = jwt.decode(
+            id_token,
+            key=loaded_cert.public_key(),
+            algorithms=[alg],
+            audience=[clientID],
+            options={
+                "verify_signature": True, 
+                "verify_exp": True,
+                "verify_nbf": True,
+                "verify_iat": True,
+                "verify_aud": True,
+                "verify_iss": True,
+            }
+        )
+        # Successful decode means all options verified
+        return True
+    
+    except Exception as e:
+        print('Exception occured while decoding token: ', e)
+        return False
+    
+```
+
+Happy authenticating your APIs! 😎
