@@ -5,11 +5,11 @@ title:  "Authentication using Azure Entra ID bearer tokens"
 date:   2025-06-17 10:00:00
 ---
 
-You have an application and you want Azure Entra to manage your application security - Both user authN/authZ (not covered in this post) and application authN (covered in this post).
+☑️ You have an application and you want Azure Entra to manage your application security - Both user authN/authZ (not covered in this post) and application authN (covered in this post).
 
-Azure Entra needs to identify your app and act as the auth provider, can produce tokens for external apps on your behalf and help you verify the token sent over by the external app during API calls.
+☑️ Azure Entra needs to identify your app and act as the auth provider, can produce tokens for external apps on your behalf and help you verify the token sent over by the external app during API calls.
 
-Application authentication meaning, your application exposes APIs to other apps and when those other apps consume APIs in your application, they need to obtain and send an `access_token` as **bearer token** which you then need to verify.
+☑️ Application authentication meaning, your application exposes APIs to other apps and when those other apps consume APIs in your application, they need to obtain and send an `access_token` as **bearer token** which you then need to verify.
 
 How do you set this up?
 
@@ -138,13 +138,13 @@ exports.checkAuthToken = async (req, res, next) => {
 7. Verify using well formed signed key and algorithm
 8. Verify token is not expired and audience match (Audience match is not mandatory, added just as additional check)
 
-**Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. **
+☑️ **Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. **
 
-**This method doesn't have any user credentials involved in this.**
+☑️ **This method doesn't have any user credentials involved in this.**
 
-**If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. **
-
-**In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.**
+☑️ **If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. **
+ 
+☑️ **In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.**
 
 If you are using Azure Entra ID (earlier known as Azure Active Directory), then you can best use MSAL.js to authenticate users to your application and you will get the `id_token`, along with `acess_token` and `refresh_token`.
 
