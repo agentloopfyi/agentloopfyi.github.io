@@ -5,7 +5,7 @@ title:  "Authentication using Azure Entra ID bearer tokens"
 date:   2025-06-17 10:00:00
 ---
 
-☑️ You have an application and you want Azure Entra to manage your application security - Both user authN/authZ (not covered in this post) and application authN (covered in this post).
+☑️ You have an application and you want Azure Entra to manage your application security - Both user authN/authZ and application authN (both covered in this post).
 
 ☑️ Azure Entra needs to identify your app and act as the auth provider, can produce tokens for external apps on your behalf and help you verify the token sent over by the external app during API calls.
 
