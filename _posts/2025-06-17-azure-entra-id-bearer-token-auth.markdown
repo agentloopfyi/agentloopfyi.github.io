@@ -138,11 +138,13 @@ exports.checkAuthToken = async (req, res, next) => {
 7. Verify using well formed signed key and algorithm
 8. Verify token is not expired and audience match (Audience match is not mandatory, added just as additional check)
 
-Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. 
-This method doesn't have any user credentials involved in this.
+**Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. **
 
-If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. 
-In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.
+**This method doesn't have any user credentials involved in this.**
+
+**If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. **
+
+**In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.**
 
 If you are using Azure Entra ID (earlier known as Azure Active Directory), then you can best use MSAL.js to authenticate users to your application and you will get the `id_token`, along with `acess_token` and `refresh_token`.
 
