@@ -5,11 +5,13 @@ title:  "Authentication using Azure Entra ID bearer tokens"
 date:   2025-06-17 10:00:00
 ---
 
-☑️ You have an application and you want Azure Entra to manage your application security - Both user authN/authZ and application authN (both covered in this post).
+You have an application and you want Azure Entra ID to manage your application security - Both user and application authentication.
 
-☑️ Azure Entra needs to identify your app and act as the auth provider, can produce tokens for external apps on your behalf and help you verify the token sent over by the external app during API calls.
+### For application-to-application authentication
 
-☑️ Application authentication meaning, your application exposes APIs to other apps and when those other apps consume APIs in your application, they need to obtain and send an `access_token` as **bearer token** which you then need to verify.
+☑️ Azure Entra ID needs to identify your app and act as the auth provider, and can produce tokens for external apps on your behalf and help you verify the token sent over by the external app during API calls.
+
+☑️ Application-to-application authentication meaning, your application exposes APIs to other apps and when those other apps consume APIs in your application, they need to obtain and send an `access_token` as **bearer token** which you then need to verify.
 
 How do you set this up?
 
@@ -23,15 +25,15 @@ It will show a tenant ID (your org) and a client ID (representing your app).
 
 Once done...
 
-Click `Overview` → Set a meaningful Application ID URI, in dev we have set it as `api://zzzz`.
+Click `Overview` ➡️ Set a meaningful Application ID URI, in dev we have set it as `api://<some-meaningful-text>`.
 
-`Certificates and Secrets` → Create a new client secret. This client secret should be unique for consuming applications.
+Go to `Certificates and Secrets` ➡️ Create a new client secret. This client secret should be unique for each consuming applications.
 
 That means, for each external application that wants to consume your API, you need to create a client secret.
 
-**How to get a token (this process to be followed by the external application to get a token from Azure Entra)**
+**Now how does the consuming app obtain a bearer token?**
 
-Gather following info from your Azure Entra app registration both available on the Overview page of the app registration. 
+Gather following info from your Azure Entra ID app registration both available on the Overview page of the app registration. 
 
 ```bash
 tenant_id = *Directory (tenant) ID - Your org ID* 
@@ -39,6 +41,8 @@ client_id = *Application (client) ID - Your application ID as Entra understands 
 client_secret = *as obtained during creation*
 scope = {Application ID URI}/.default
 ```
+
+This needs to be securely used by the external app.
 
 To get a token the external app must invoke the following API (Use Postman for example):
 
@@ -48,14 +52,14 @@ Send request body as `x-www-form-urlencoded`:
 
 ```bash
 grant_type=client_credentials
-client_id=xxxx
-client_secret=wwww
-scope=api://zzzz/.default
+client_id=<generated-client-id>
+client_secret=<generated-client-secret>
+scope=api://<some-meaningful-text>/.default
 ```
 
 Same way, by invoking this API, the external consumer will get an `access_token` (JWT).
 
-Using the `access_token` as `Bearer cccc` in `Authorization` header, the external consumer will make API calls to your application.
+Using the `access_token` as `Bearer <obtained-access-token>` in `Authorization` header, the external consumer will make API calls to your application.
 
 **How do you verify the token**
 
@@ -74,9 +78,9 @@ npm i jsonwebtoken axios
 const axios = require('axios').default;
 const jwt = require('jsonwebtoken');
 
-const audience = 'api://zzzz'; // You set it earlier in Entra, this is the Application ID URI only
-const tenantID = '....'; // Your org ID in Entra - Available on the overview page in app reg
-const appID = '....'; // ID using which Entra identifies your app - Available on the overview page in app reg
+const audience = 'api://<some-meaningful-text>'; // You set it earlier in Entra, this is the Application ID URI only
+const tenantID = '<tenant-id>'; // Your org ID in Entra - Available on the overview page in app reg
+const appID = '<client-id>'; // ID using which Entra identifies your app - Available on the overview page in app reg - interchangeably called client/app ID
 
 const isTokenExpired = (epoch) => epoch*1000 < Date.now();
 
@@ -138,9 +142,11 @@ exports.checkAuthToken = async (req, res, next) => {
 7. Verify using well formed signed key and algorithm
 8. Verify token is not expired and audience match (Audience match is not mandatory, added just as additional check)
 
-☑️ **Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra. **
+**Code and explanations above shows how to establish application to application integration using `access_tokens` from Azure Entra.**
 
-☑️ **This method doesn't have any user credentials involved in this.**
+**This method doesn't have any user credentials involved in this.**
+
+### For user sign-in (SSO) based authentication
 
 ☑️ **If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. **
  
