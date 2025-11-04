@@ -148,9 +148,9 @@ exports.checkAuthToken = async (req, res, next) => {
 
 ### For user sign-in (SSO) based authentication
 
-☑️ **If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. **
+☑️ If you want to enstablish an auth flow that involves user credentials, then you need `id_tokens`. 
  
-☑️ **In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.**
+☑️ In order to get an `id_token` you need to develop a user auth flow like MSAL or OIDC that will help you get an `id_token`.
 
 If you are using Azure Entra ID (earlier known as Azure Active Directory), then you can best use MSAL.js to authenticate users to your application and you will get the `id_token`, along with `acess_token` and `refresh_token`.
 
