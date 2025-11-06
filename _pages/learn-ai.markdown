@@ -8,6 +8,8 @@ comment: false
 
 I am collecting some awesome AI, math and related content from blogs, websites, YouTube, etc!
 
+- [Stanford CME 295](https://cme295.stanford.edu/syllabus/)
+
 - [Deep Learning by Professor Bryce](https://www.youtube.com/watch?v=DrhJLHiia7g&list=PLgPbN3w-ia_PeT1_c5jiLW3RJdR7853b9)
 
 - [MCP for beginners by Microsoft](https://www.youtube.com/watch?v=VfZlglOWWZw&list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d)
