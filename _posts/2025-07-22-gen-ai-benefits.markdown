@@ -20,7 +20,7 @@ Everyone wants to build agents today. But does it make sense? How do you know th
 
 ✨ **What are the business drivers?**
 
-- Automation: Automate manual and error prone tasks (Not robotic process automation)
+- Automation: Automate manual and error prone tasks (Not robotic process automation), tasks that can recover automatically on failure, have some degree of autonomoy to make decisions and choose the correct path of execution
 - Augmentation: A helpful assistant, or co-worker, you get more done and level up your expertise
 - Differentiation: Advisory, optimization, etc
 
