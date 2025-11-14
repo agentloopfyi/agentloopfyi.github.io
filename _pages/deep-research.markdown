@@ -6,7 +6,7 @@ includelink: false
 comment: false
 ---
 
-Everything I have learnt about deep research is from the following resources:
+Everything I have learnt about deep research are from the following resources:
 
 1️⃣ [LangChain's deep research from scratch](https://github.com/langchain-ai/deep_research_from_scratch)
 
@@ -39,6 +39,6 @@ The results were amazing!
 
 🔥 On top of this core idea of deep research, I had used periodic summarization of messages exchanged, context tailoring and evaluation of report using the LLM-as-judge technique.
 
-🔥 LLM-as-judge could simply be done by having a specialist agent with "evaluator" role that knows your evaluation criteria (may be with examples), and it evaluates the content provided with discrete labels like POOR, AVERAGE, GOOD or VERY GOOD. Then your conditional acceptance may go ahead with GOOD and VERY GOOD reports, and sent POOR and GOOD reports back to the main agent to re-do the research. The trick is to configure your evaluator agent to write a feedback for substandard reports, which you can put into the context of the main or sub-agents in the next pass.
+🔥 LLM-as-judge could simply be done by having a specialist agent with "evaluator" role that knows your evaluation criteria (may be with examples), and it evaluates the content provided with discrete labels like POOR, AVERAGE, GOOD or VERY GOOD. Then your conditional acceptance may go ahead with GOOD and VERY GOOD reports, and send POOR and GOOD reports back to the main agent to re-do the research. The trick is to configure your evaluator agent to write a feedback for substandard reports, which you can put into the context of the main or sub-agents in the next pass.
 
 Give it a try.
