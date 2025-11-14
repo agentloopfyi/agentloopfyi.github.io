@@ -29,7 +29,7 @@ Everything I have learnt about deep research are from the following resources:
 
 ✅ Cleverly written [**ReAct** prompts](https://smith.langchain.com/hub/hwchase17/react) and efficient context engineering [**read this**](https://simonwillison.net/2025/jun/27/context-engineering/) and [**this**](https://www.philschmid.de/context-engineering) - Create as much context for individual agents, remove anything not required
 
-✅ ToDos can be read from file system and put into context as required, RAG/knowledge graph based data retrieval also helps to identify key information required for the particular agent in action and providing it the particular information it needs (nearly zero-noise contenxt - as LLMs usually hallicinate after 33K tokens)
+✅ ToDos can be read from file system and put into context as required, RAG/knowledge graph based data retrieval also helps to identify key information required for the particular agent in action and providing it the particular information it needs (nearly zero-noise contenxt - as LLMs hallucinate when they have to juggle with a lot of different information)
 
 ✅ The "main" agent finally aggregates all the results from all the sub-agents and creats the final research report in one shot
 
