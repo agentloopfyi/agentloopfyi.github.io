@@ -10,7 +10,7 @@ Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">S
 
 ✨ [Roadmap for Agentic AI](/agentic-ai) — If you're learning agentic AI, take a look here.
 
-✨ [Deep Research](/) — Coming soon!
+✨ [Deep Research](/deep-research) — Thing's I've learned about agentic deep research.
 
 Having spent 12+ years in the industry, I currently work as an AI Engineer and solution architect, developing AI agents and agentic workflows in deep research for enterprise problems. I build problem solving software specializing in automating business processes and adding decision-making AI to boost efficiency.
 
