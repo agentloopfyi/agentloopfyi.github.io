@@ -31,7 +31,7 @@ Everything I have learnt about deep research are from the following resources:
 
 ✅ ToDos can be read from file system and put into context as required, RAG/knowledge graph based data retrieval also helps to identify key information required for the particular agent in action and providing it the particular information it needs (nearly zero-noise contenxt - as LLMs hallucinate when they have to juggle with a lot of different information)
 
-✅ The "main" agent finally aggregates all the results from all the sub-agents and creats the final research report in one shot
+✅ The "main" agent finally aggregates all the results from all the sub-agents and creates the final research report in one shot
 
 I have used this pattern for a quite complicated research-like use case (with GPT 4.1 mini).. 
 
