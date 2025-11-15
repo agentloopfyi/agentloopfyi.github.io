@@ -284,7 +284,7 @@ Return the exact text reviewed by you after removing all XML tags or markdown la
 
 ```python
 from agents import Agent
-
+from pydantic import BaseModel, Field
 
 deployment = "gpt-4.1-mini"
 
