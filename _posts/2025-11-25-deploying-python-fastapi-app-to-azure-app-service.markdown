@@ -11,7 +11,7 @@ While you should almost always use WSL, in the rare unfortunate event otherwise,
 In this post I describe how I develop Python/FastAPI backends with LangGraph, LangChain, etc, and deploy to Azure App Service from my local workstation for PoC/MVP demonstrations.
 While I follow the same setup, project structure and build and deployment process beyond MVP, but instead of using PowerShell scritps to build and deploy, we use proper CI/CD pipelines in Azure DevOps, that triggers everytime a pull request (or some say merge request) is merged into the dev branch, or the dev branch is merged to master.
 
-### Project setup
+#### Project setup
 
 ```powershell
 > New-Item -ItemType Directory -Path 'app_folder'
@@ -20,7 +20,7 @@ While I follow the same setup, project structure and build and deployment proces
 > uv add <python packages you need>
 ```
 
-### The project structure I use, mostly looks like this...
+#### The project structure I use, mostly looks like this...
 
 ```md
 📁 app_folder
@@ -139,7 +139,7 @@ from .settings import settings
 
 In case you are interested about managed identities and keyless authentication with Azure OpenAI, check my <a href="/2025/05/06/keyless-auth-openai/">Wother post</a>.
 
-### The build script (inside win_scripts folder)
+#### The build script (inside win_scripts folder)
 This script creates a folder called `deployment` consolidating all the artifacts required for deployment into the App Service.
 
 ```powershell
@@ -190,7 +190,7 @@ $Deploy_Config | Out-File -FilePath $Folder'\.deployment'
 Write-Host "Done."
 ```
 
-### The deployment script (inside win_scripts folder)
+#### The deployment script (inside win_scripts folder)
 This script creates a zip with the contents of the `deployment` folder, and pushes it into the App Service - Replicating CI/CD.
 
 ```powershell
@@ -229,7 +229,7 @@ Write-Host "Check deployment logs: https://<your app service name>.scm.azurewebs
 
 The script will deploy the Python app and poll the App Service's start up status. The script will exit once the App Service has started.
 
-### However, the App Service might not start and the script might terminate with error in the following events:
+#### However, the App Service might not start and the script might terminate with error in the following events:
 
 ❌ One or more env-var required for the app to start, is/are missing. You need to add the env-var in the App Service's settings
 
