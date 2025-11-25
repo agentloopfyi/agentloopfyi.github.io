@@ -5,13 +5,19 @@ title:  "Deploying Python and FastAPI app to Azure App Service"
 date:   2025-11-25 10:00:00
 ---
 
+Most of us work on a Windows system and develop software that we eventually deploy on Linux OS (For eg., Linux based Azure App Service for Python).
+While you should almost always use WSL, in the rare unfortunate event otherwise, some handy scripts always help.
+
+This is how I develop Python/FastAPI backends with LangGraph, LangChain, etc, and deploy to Azure App Service from my local workstation for PoC/MVP demonstrations.
+While I follow the same setup, project structure and build and deployment process beyond MVP, but instead of using PowerShell scritps to build and deploy, we use proper CI/CD pipelines in Azure DevOps, that triggers everytime a pull request (or some say merge request) is merged into the dev branch, or the dev branch is merged to master.
+
 ### Project setup
 
 ```powershell
-New-Item -ItemType Directory -Path 'app_folder'
-uv init
-.venv\Scripts\activate
-uv add <python packages you need>
+> New-Item -ItemType Directory -Path 'app_folder'
+> uv init
+> .venv\Scripts\activate
+> uv add <python packages you need>
 ```
 
 ### The project structure I use, mostly looks like this...
@@ -53,6 +59,8 @@ uv add <python packages you need>
 ├── README.md
 └── uv.lock
 ```
+
+> all folders are modules, containing `__init__.py` inside.
 
 ### The build script (inside win_scripts folder)
 This script creates a folder called `deployment` consolidating all the artifacts required for deployment into the App Service.
@@ -106,7 +114,7 @@ Write-Host "Done."
 ```
 
 ### The deployment script (inside win_scripts folder)
-This script creates a zip with the contents of the `deployment` folder, and pushes it into the App Service.
+This script creates a zip with the contents of the `deployment` folder, and pushes it into the App Service - Replicating CI/CD.
 
 ```powershell
 $Folder = '.\deployment'
@@ -141,3 +149,4 @@ az webapp deploy --resource-group $Resource_Group --name $App_Service --src-path
 Write-Host "Done."
 Write-Host "Check deployment logs: https://<your app service name>.scm.azurewebsites.net/api/deployments/latest"
 ```
+
