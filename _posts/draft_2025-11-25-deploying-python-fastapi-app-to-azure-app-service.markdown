@@ -8,7 +8,7 @@ date:   2025-11-25 10:00:00
 Most of us work on a Windows system and develop software that we eventually deploy on Linux OS (For eg., Linux based Azure App Service for Python).
 While you should almost always use WSL, in the rare unfortunate event otherwise, some handy scripts always help.
 
-This is how I develop Python/FastAPI backends with LangGraph, LangChain, etc, and deploy to Azure App Service from my local workstation for PoC/MVP demonstrations.
+In this post I describe how I develop Python/FastAPI backends with LangGraph, LangChain, etc, and deploy to Azure App Service from my local workstation for PoC/MVP demonstrations.
 While I follow the same setup, project structure and build and deployment process beyond MVP, but instead of using PowerShell scritps to build and deploy, we use proper CI/CD pipelines in Azure DevOps, that triggers everytime a pull request (or some say merge request) is merged into the dev branch, or the dev branch is merged to master.
 
 ### Project setup
