@@ -168,8 +168,6 @@ New-Item -ItemType Directory -Force -Path $Folder
 
 Copy-item -Force -Recurse '.\src' -Destination $Folder
 
-Copy-item -Force -Recurse '.\fonts' -Destination $Folder
-
 Copy-item -Force '.\pyproject.toml' -Destination $Folder
 
 Copy-item -Force '.\uv.lock' -Destination $Folder
