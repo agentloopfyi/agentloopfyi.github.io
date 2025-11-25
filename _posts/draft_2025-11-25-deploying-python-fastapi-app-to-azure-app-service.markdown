@@ -97,40 +97,47 @@ settings = Settings()
 
 if settings.DEBUG:
     print(f"""
-        Showing env settings for debugging purposes.
-        Please remove this in production by setting DEBUG=False.
+    Showing env settings for debugging purposes.
+    Please remove this in production by setting DEBUG=False.
 
-        APP_ENV: {settings.APP_ENV}
-        DEBUG: {settings.DEBUG}
+    APP_ENV: {settings.APP_ENV}
+    DEBUG: {settings.DEBUG}
 
-        OPENAI_API_KEY: {settings.OPENAI_API_KEY}    
-        OPENAI_API_VERSION: {settings.OPENAI_API_VERSION}
-        OPENAI_DEPLOYMENT: {settings.OPENAI_DEPLOYMENT}
-        AZURE_OPENAI_ENDPOINT: {settings.AZURE_OPENAI_ENDPOINT}
+    OPENAI_API_KEY: {settings.OPENAI_API_KEY}    
+    OPENAI_API_VERSION: {settings.OPENAI_API_VERSION}
+    OPENAI_DEPLOYMENT: {settings.OPENAI_DEPLOYMENT}
+    AZURE_OPENAI_ENDPOINT: {settings.AZURE_OPENAI_ENDPOINT}
 
-        AZURE_SUBSCRIPTION: {settings.AZURE_SUBSCRIPTION}
-        AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT: {settings.AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT}
+    AZURE_SUBSCRIPTION: {settings.AZURE_SUBSCRIPTION}
+    AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT: {settings.AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT}
 
-        USE_REMOTE_MCP: {settings.USE_REMOTE_MCP}
-        COMMON_TOOLS_MCP_URI: {settings.COMMON_TOOLS_MCP_URI}
+    USE_REMOTE_MCP: {settings.USE_REMOTE_MCP}
+    COMMON_TOOLS_MCP_URI: {settings.COMMON_TOOLS_MCP_URI}
 
-        REDIS_URI: {settings.REDIS_URI}
-        REDIS_PORT: {settings.REDIS_PORT}
-        REDIS_PASSWORD: {settings.REDIS_PASSWORD}
+    REDIS_URI: {settings.REDIS_URI}
+    REDIS_PORT: {settings.REDIS_PORT}
+    REDIS_PASSWORD: {settings.REDIS_PASSWORD}
 
-        PGVECTOR_URI: {settings.PGVECTOR_URI}
+    PGVECTOR_URI: {settings.PGVECTOR_URI}
 
-        EMBEDDING_MODEL: {settings.EMBEDDING_MODEL}
-        EMBEDDING_API_VERSION: {settings.EMBEDDING_API_VERSION}
-        
-        USE_DEEP_RESEARCH: {settings.USE_DEEP_RESEARCH}
+    EMBEDDING_MODEL: {settings.EMBEDDING_MODEL}
+    EMBEDDING_API_VERSION: {settings.EMBEDDING_API_VERSION}
+    
+    USE_DEEP_RESEARCH: {settings.USE_DEEP_RESEARCH}
 
-        AZURE_CLIENT_ID: {settings.AZURE_CLIENT_ID} # Client ID of your managed identity
-
+    AZURE_CLIENT_ID: {settings.AZURE_CLIENT_ID} # Client ID of your managed identity
     """)
 ```
 
-In case you are interested about managed identities and keyless authentication with Azure OpenAI, check my other post.
+The `settings\settings.py` contains...
+
+```python
+from .settings import settings
+```
+
+..to exports the settings.
+
+In case you are interested about managed identities and keyless authentication with Azure OpenAI, check my <a href="/2025/05/06/keyless-auth-openai/">Wother post</a>.
 
 ### The build script (inside win_scripts folder)
 This script creates a folder called `deployment` consolidating all the artifacts required for deployment into the App Service.
