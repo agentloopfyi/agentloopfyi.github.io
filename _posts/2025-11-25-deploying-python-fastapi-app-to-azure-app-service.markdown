@@ -60,7 +60,7 @@ While I follow the same setup, project structure and build and deployment proces
 └── uv.lock
 ```
 
-> all folders are modules, containing `__init__.py` inside.
+> All folders are modules, containing `__init__.py` inside.
 
 Locally we can use a `.env` file and list env-vars there. Using the `python-dotenv` package along with `pydantic` provides a clever way to intialize a `Settings` class, that contains all env-vars as class member variables. So instead of doing `os.getenv(...)` all over the place we can import the settings.
 
