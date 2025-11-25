@@ -88,4 +88,17 @@ set_default_openai_client(openai_client, use_for_tracing=False)
 
 ```
 
-#### Running on a cloud environment need an Azure service principal.
+#### Running on a cloud environment needs an Azure service principal.
+
+You need to create a managed identity, and the managed identity must have an "Azure role assignment" of "Cognitive Services OpenAI Contributor" on the Resource Group your AI Foundry belongs to. You need to collect the Client ID of the managed identity and set in an environment variable `AZURE_CLIENT_ID`.
+
+The following example works for both localhost development and cloud deployements.
+
+```python
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+
+credential = DefaultAzureCredential(exclude_shared_token_cache_credential=True) # This will pick the env-var AZURE_CLIENT_ID
+token_provider = get_bearer_token_provider(credential, settings.AZURE_BEARER_TOKEN_PROVIDER_ENDPOINT)
+
+# Everything else remains same.
+```
