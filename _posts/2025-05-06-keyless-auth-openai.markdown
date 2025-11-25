@@ -92,6 +92,8 @@ set_default_openai_client(openai_client, use_for_tracing=False)
 
 You need to create a managed identity, and the managed identity must have an "Azure role assignment" of "Cognitive Services OpenAI Contributor" on the Resource Group your AI Foundry belongs to. You need to collect the Client ID of the managed identity and set in an environment variable `AZURE_CLIENT_ID`.
 
+Then assuming you're deploying your app in an Azure Web App (App Service), you need to go to the app service's Identity menu, under Settings; then select User Assigned tab from there, and attach your managed identity to the Azure Services.
+
 The following example works for both localhost development and cloud deployements.
 
 ```python
