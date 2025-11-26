@@ -7,7 +7,7 @@ date:   2025-10-04 10:00:00
 
 LLMs hallucinate after ~30K tokens.
 
-Also, more tokens mean more money spent. 
+Also, more tokens mean more money spent - And doesn't necessarily mean better answers. 
 
 While prompts have been doing wonders with techniques like ReAct, chain of thoughts, etc, it is clear as interaction with LLMs increase throughout the session or workflow, it is not really a practical option to put more and more messages and information in the prompt.
 
