@@ -6,7 +6,7 @@ includelink: false
 comment: false
 ---
 
-#### 🆕 Developing agentic software?
+### 🆕 Developing agentic software?
 
 I am posting content here that will help you get idea on building agentic software systems.
 
