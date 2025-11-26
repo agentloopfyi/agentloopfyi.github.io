@@ -137,7 +137,7 @@ from .settings import settings
 
 ..to exports the settings.
 
-In case you are interested about managed identities and keyless authentication with Azure OpenAI, check my <a href="/2025/05/06/keyless-auth-openai/">Wother post</a>.
+In case you are interested about managed identities and keyless authentication with Azure OpenAI, check my <a href="/2025/05/06/keyless-auth-openai/">other post</a>.
 
 #### The build script (inside win_scripts folder)
 This script creates a folder called `deployment` consolidating all the artifacts required for deployment into the App Service.
