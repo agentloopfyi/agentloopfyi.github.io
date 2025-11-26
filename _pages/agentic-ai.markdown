@@ -68,10 +68,10 @@ Python perhaps is easier to learn, but you need to know how to do async programm
 
 ✅ Learn structured inputs, structured outputs and guardrails
 
-✅ Learn agentic workflow patterns and orchestration, add multiple agents
+✅ Learn agentic workflow patterns (like supervisor-worker, chaining, parallelising, evaluator-optimizer, etc), add multiple agents
 
 ✅ Provide more tools to the agent, learn how agent picks the best tool. Also, take a look at Model Context Protocol
 
 ✅ Logging, monitoring, LLMOps and deployment (Check tools like LangSmith, Arize, etc)
 
-✅ Dive deep into evals (Evaluation of how the agents are performing!) - LLM as judge is a popular technique.
+✅ Dive deep into evals (Evaluation of how the agents are performing!) - LLM as judge is a popular technique done using the evaluator-optimizer pattern,.
