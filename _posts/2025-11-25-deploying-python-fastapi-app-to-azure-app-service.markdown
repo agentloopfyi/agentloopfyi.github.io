@@ -15,6 +15,8 @@ While I follow the same setup, project structure and build and deployment proces
 
 ```powershell
 > New-Item -ItemType Directory -Path 'app_folder'
+> uv python install 3.11
+> uv python pin 3.11
 > uv init
 > .venv\Scripts\activate
 > uv add <python packages you need>
