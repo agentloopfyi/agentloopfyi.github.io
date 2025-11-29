@@ -5,7 +5,7 @@ title:  "Prompt vs Context Engineering"
 date:   2025-10-04 10:00:00
 ---
 
-[1] [Context engineering by Sam Wilson](https://simonwillison.net/2025/jun/27/context-engineering/)
+[1] [Context engineering by Sam Wilson](https://simonwillison.net/tags/context-engineering/)
 
 [2] [Context engineering by Phil Schmid](https://www.philschmid.de/context-engineering)
 
