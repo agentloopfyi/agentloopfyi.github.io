@@ -5,7 +5,10 @@ title:  "Prompt vs Context Engineering"
 date:   2025-10-04 10:00:00
 ---
 
-LLMs hallucinate after ~30K tokens.
+[1] [Context engineering by Sam Wilson](https://simonwillison.net/2025/jun/27/context-engineering/)
+[2] [Context engineering by Phil Schmid](https://www.philschmid.de/context-engineering)
+
+LLMs hallucinate after ~30K tokens (I read this somewhere, I don't know the exact number.. But LLMs do halucinate as the token input size grows).
 
 Also, more tokens mean more money spent - And doesn't necessarily mean better answers. 
 
