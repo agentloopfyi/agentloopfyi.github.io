@@ -6,6 +6,7 @@ date:   2025-10-04 10:00:00
 ---
 
 [1] [Context engineering by Sam Wilson](https://simonwillison.net/2025/jun/27/context-engineering/)
+
 [2] [Context engineering by Phil Schmid](https://www.philschmid.de/context-engineering)
 
 LLMs hallucinate after ~30K tokens (I read this somewhere, I don't know the exact number.. But LLMs do halucinate as the token input size grows).
