@@ -156,7 +156,7 @@ def sub_agent_selection_tool(
 ```python
 DEEP_RESEARCH_PROMPT = """
 You are an expert in this and that. You have access to specialist sub-agents to delegate your work.
-Each sub-agent will need specific sections from the input porvided to you, you need to extract specific sections for each sub-agent, provide the extract to the corresponding sub-agent during delegation and get the work done and.
+Each sub-agent will need specific sections from the input porvided to you, you need to extract specific sections for each sub-agent, provide the extract to the corresponding sub-agent during delegation and get the work done.
 
 Available agents for delegation are:
 
@@ -172,7 +172,8 @@ You are provided with the input below, based on which you need to do your job.
 {input}
 </Input>
 
-The has been evaluated by an expert evaluator as {eval} with the following reasons:
+The input has been evaluated by an expert evaluator as {eval} with the following reasons:
+
 <Reason>
 {eval_reason}
 </Reason>
