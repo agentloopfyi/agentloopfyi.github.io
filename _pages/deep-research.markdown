@@ -74,11 +74,11 @@ def get_sub_agent_5():
   )
 
 SUB_AGENT_TYPE = Literal[
-  "sub_agent_1",  # Do task A
-  "sub_agent_2",  # Do task B
-  "sub_agent_3",  # Do task C
-  "sub_agent_4",  # Do task D
-  "sub_agent_5",  # Do task E
+  "sub_agent_1",  # Specialist in task A
+  "sub_agent_2",  # Specialist in task B
+  "sub_agent_3",  # Specialist in task C
+  "sub_agent_4",  # Specialist in task D
+  "sub_agent_5",  # Specialist in task E
 ]
 
 subagents: Dict[SUB_AGENT_TYPE, CompiledStateGraph] = {}
