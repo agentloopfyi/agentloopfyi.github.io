@@ -172,12 +172,6 @@ You are provided with the input below, based on which you need to do your job.
 {input}
 </Input>
 
-The input has been evaluated by an expert evaluator as {eval} with the following reasons:
-
-<Reason>
-{eval_reason}
-</Reason>
-
 **Your goal:**
 Blah blah blah
 
@@ -199,13 +193,7 @@ Your output must be the exact report only; NO additional sentences, follow-up qu
 
 llm_response = get_deep_research_agent().invoke(
   {  
-    "messages": [
-      HumanMessage(content=DEEP_RESEARCH_PROMPT.format(
-        input=state["input"],
-        eval=state["eval"], # Discrete values like, VERY GOOD, GOOD, OK, etc
-        eval_reason=state["eval_reason"],) # Comments on quality of the input, could be from an evaluator agent obtained before
-      )
-    ]    
+    "messages": [HumanMessage(content=DEEP_RESEARCH_PROMPT.format(input=state["input"])]    
   }
 )
 ```
