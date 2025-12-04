@@ -13,6 +13,8 @@ date:   2025-12-04 10:00:00
 
 #### Why do we need HITL?
 
+#### How HITL internally works?
+
 #### Working example
 
 ```python
@@ -57,3 +59,5 @@ builder.add_edge("interrupt_node", "ending_node")
 graph = builder.compile()
 
 ```
+
+#### Conclusion
