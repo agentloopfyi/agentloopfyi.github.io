@@ -29,15 +29,15 @@ async def starting_node(state: AgentState) -> AgentState:
   # do stuff
   # return {...}
   
-def interrupt_node(state: AgentState) -> Command[Literal["next_agent_node"]]: 
+def interrupt_node(state: AgentState) -> Command[Literal["ending_node"]]: 
   banner = "Do you want to continue?" # The message you want to show the user when raising the interrupt
   human_input: str = interrupt({"banner": banner, "resume_choices": ["YES", "NO"]}) # Choices available to the user to resume from the interrupt
 
   return Command(
-    goto="next_agent_node",
+    goto="ending_node",
     update={
       "messages": [
-        AIMessage(content=banner),
+        AIMessage(content=banner), # The messages shown when raising the interrupt
         HumanMessage(content=human_input), # YES or NO, according to resume choices
       ]
     },
