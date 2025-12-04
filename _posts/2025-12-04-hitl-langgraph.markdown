@@ -55,6 +55,7 @@ builder.add_node(ending_node)
 builder.add_edge(START, "starting_node")
 builder.add_edge("starting_node", "interrupt_node")
 builder.add_edge("interrupt_node", "ending_node")
+builder.add_edge("ending_node", END)
 
 graph = builder.compile()
 
