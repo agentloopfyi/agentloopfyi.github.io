@@ -58,16 +58,16 @@ def interrupt_node(state: AgentState) -> Command[Literal["ending_node"]]:
     next_node = 'may_be_node'
 
   return Command(
-      goto=next_node, # commanding the graph which node to go after resuming
-      # You should also update the messages to keep track of the interrupt message as AI Message and the choice selected by human as Human Message
-      # This helps maintaining the flow of messages in the same AI, Human, AI, Human... sequence
-      update={
-        "messages": [
-          AIMessage(content=banner), # The messages shown when raising the interrupt
-          HumanMessage(content=human_input), # YES NO or MAY BE, which ever choice human selected
-        ]
-      },
-    )
+    goto=next_node, # commanding the graph which node to go after resuming
+    # You should also update the messages to keep track of the interrupt message as AI Message and the choice selected by human as Human Message
+    # This helps maintaining the flow of messages in the same AI, Human, AI, Human... sequence
+    update={
+      "messages": [
+        AIMessage(content=banner), # The messages shown when raising the interrupt
+        HumanMessage(content=human_input), # YES NO or MAY BE, which ever choice human selected
+      ]
+    },
+  )
     
 
 async def yes_node(state: AgentState) -> AgentState:
