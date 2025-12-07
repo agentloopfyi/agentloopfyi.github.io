@@ -7,10 +7,11 @@ date:   2025-12-03 10:00:00
 
 #### Implementing human-in-the-loop (HITL) in LangGraph
 
-**What is HITL?**
+📌 **What is HITL?**
+
 When you have introduced quite a lot of autonomy in your workflows but still there are some actions that are best taken care by humans, then you can introduce an "interrupt".. that brings a human action into the agent loop. The agent will wait, until a human takes and action, by persisting the state of the workflow till that point, and then resume based on the action that the human has taken. The action taken by the human could be a response with a semantic meaning that could be resolve to an action, or you can provide choices like, "Yes", "No", "Approve", "Reject", etc, and resume the graph from the interrupt.
 
-**How HITL internally works?**
+📌 **How HITL internally works?**
 
 I am personally a LangGraph fan. HITL interrupts are raised in LangGraph by using the `interrupt` function from the `langgraph.types` module.
 
@@ -18,9 +19,9 @@ You call this function in the graph node that you need to specifically keep for 
 
 Remember, ideally the `interrupt` function call must be the first instruction inside the node. You may have some variable intialization before that, but dont do anything that might have a side effect. Because, when the graph resumes from the interrupt, then it does not resume from the particular line of code in your interrupt node function where you called `interrupt`, rather by executing the interrupt node itself from the beginning of the function. Think of interrupts as an exception raised by LangGraph, having the state persisted to that point and then resuming from that point itself when human takes an action.
 
-Therefore, you cannot your HITL without checkpointing. Good to use in-memory checkpointing in examples, but use Redis or Postgres checkpointing in live environments.
+🚀 Therefore, you cannot your HITL without checkpointing. Good to use in-memory checkpointing in examples, but use Redis or Postgres checkpointing in live environments.
 
-**Working example**
+📌 **Working example**
 
 Simple example showing...
 
@@ -30,7 +31,7 @@ Simple example showing...
 
 3️⃣ Human resumes from choices of yes, no and may be.
 
-**Raise a HITL interrupt**
+**Raise an HITL interrupt**
 
 ```python
 from typing import Literal, Tuple
@@ -69,7 +70,6 @@ def interrupt_node(state: AgentState) -> Command[Literal["ending_node"]]:
     },
   )
     
-
 async def yes_node(state: AgentState) -> AgentState:
   # take YES actions
   # return {...}
@@ -136,7 +136,7 @@ else:
 
 Send this `is_interrupted` flag to the UI to tell this is not a regular response, rather an HITL response.
 
-Therefore, when the graph raises an interrupt, the state returned by the `ainvoke` call (or `invoke` call) contains a special key by the name of `__interrupt__`.
+🚀 Therefore, when the graph raises an interrupt, the state returned by the `ainvoke` call (or `invoke` call) contains a special key by the name of `__interrupt__`.
 
 **Resume from interrupt**
 
@@ -151,6 +151,6 @@ else:
   state = await graph.ainvoke(current_state, config=config)
 ```
 
-We resume from HITL interrupts using `Command` in the `ainvoke` call (or `invoke` call) on the graph. Resume using the choice clicked by the human. Send the exact values, yes, no or may be.
+🚀 We resume from HITL interrupts using `Command` in the `ainvoke` call (or `invoke` call) on the graph. Resume using the choice clicked by the human. Send the exact values, yes, no or may be.
 
 That's pretty much you need to build a working HITL workflow. Happy learning!
