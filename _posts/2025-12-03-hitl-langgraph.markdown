@@ -140,7 +140,7 @@ Send this `is_interrupted` flag to the UI to tell this is not a regular response
 
 **Resume from interrupt**
 
-Based on the `is_interrupted` flag we sent earlier, the UI while making the next API call when he user clicks one of the resume choices, can tell the API using a flag like `resuming_from_interrupt` that this is not a regular API call.. we are resuming from an HITL interrupt.
+Based on the `is_interrupted` flag we sent earlier, the UI while making the next API call when the user clicks one of the resume choices, can tell the API using a flag like `resuming_from_interrupt` that this is not a regular API call.. we are resuming from an HITL interrupt.
 
 ```python
 if request.resuming_from_interrupt is True:
