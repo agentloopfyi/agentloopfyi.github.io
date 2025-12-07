@@ -19,7 +19,7 @@ You call this function in the graph node that you need to specifically keep for 
 
 Remember, ideally the `interrupt` function call must be the first instruction inside the node. You may have some variable intialization before that, but dont do anything that might have a side effect. Because, when the graph resumes from the interrupt, then it does not resume from the particular line of code in your interrupt node function where you called `interrupt`, rather by executing the interrupt node itself from the beginning of the function. Think of interrupts as an exception raised by LangGraph, having the state persisted to that point and then resuming from that point itself when human takes an action.
 
-🚀 Therefore, you cannot your HITL without checkpointing. Good to use in-memory checkpointing in examples, but use Redis or Postgres checkpointing in live environments.
+🚀 Therefore, you cannot raise HITL interrupts without checkpointing. Good to use in-memory checkpointing in examples, but use Redis or Postgres checkpointing in live environments.
 
 📌 **Working example**
 
