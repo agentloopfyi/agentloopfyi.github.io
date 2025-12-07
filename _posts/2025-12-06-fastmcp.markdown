@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-title:  "MCP server built using FastMCP with authentication and agent as tool"
+title:  "MCP server built using FastMCP with API authentication, agent as tool and keyless authentication w/ Azure OpenAI"
 date:   2025-12-06 10:00:00
 ---
 
