@@ -1,0 +1,14 @@
+---
+layout: post
+comments: false
+title:  "MCP server built using FastMCP with authentication and agent as tool"
+date:   2025-12-06 10:00:00
+---
+
+If you need to develop an MCP server hosting a common set of tools for AI agents, read this post! 
+
+Built with FastMCP and FastAPI, with example for both agents (wrapped in tool) using Microsoft Azure OpenAI with authentication using managed identity, and normal function tools (regular Python function). 
+
+I deployed this on Azure App Service (Linux) with Python 3.11 runtime. I created this single-file gist as a reference template, you need to adjust here and there and modularize as per your needs.
+
+<script src="https://gist.github.com/agentloopfyi/4647c82939b3ab3fe2a3460c4c4fdc6b.js"></script>
