@@ -7,7 +7,7 @@ date:   2025-12-03 10:00:00
 
 📌 **What is HITL?**
 
-When you have introduced quite a lot of autonomy in your workflows but still there are some actions that are best taken care by humans, then you can introduce an "interrupt".. that brings a human action into the agent loop. The agent will wait, until a human takes and action, by persisting the state of the workflow till that point, and then resume based on the action that the human has taken. The action taken by the human could be a response with a semantic meaning that could be resolve to an action, or you can provide choices like, "Yes", "No", "Approve", "Reject", etc, and resume the graph from the interrupt.
+When you have introduced quite a lot of autonomy in your workflows but still there are some actions that are best taken care by humans, then you can introduce an "interrupt".. that brings a human action into the agent loop. The agent will wait, until a human takes and action, by persisting the state of the workflow till that point, and then resume based on the action that the human has taken. The action taken by the human could be a response with a semantic meaning that could be resolved to an action, or you can provide choices like, "Yes", "No", "Approve", "Reject", etc, and resume the graph from the interrupt.
 
 📌 **How HITL internally works?**
 
