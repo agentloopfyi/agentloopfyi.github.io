@@ -1,11 +1,9 @@
 ---
 layout: post
 comments: false
-title:  "Human In the Loop with LangGraph"
+title:  "Human In the Loop using LangGraph"
 date:   2025-12-03 10:00:00
 ---
-
-#### Implementing human-in-the-loop (HITL) in LangGraph
 
 📌 **What is HITL?**
 
