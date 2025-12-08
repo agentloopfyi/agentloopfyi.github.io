@@ -152,3 +152,5 @@ else:
 🚀 We resume from HITL interrupts using `Command` in the `ainvoke` call (or `invoke` call) on the graph. Resume using the choice clicked by the human. Send the exact values, yes, no or may be.
 
 That's pretty much you need to build a working HITL workflow. Happy learning!
+
+🚀 Ofcourse, software is eventually about abstractions. If you want to use the HITL middleware, look [here](https://docs.langchain.com/oss/python/langchain/middleware/built-in#human-in-the-loop).
