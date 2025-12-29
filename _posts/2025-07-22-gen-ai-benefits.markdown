@@ -57,3 +57,7 @@ Better
 - Tasks humans aren’t good at
 - Tasks which should be best left to machines
 - Tasks which humans simply can’t do
+
+✨ **Read more...**
+
+- [Tobias Zwingmann's post](https://blog.tobiaszwingmann.com/p/ai-workflows-vs-ai-agents-vs-everything-in-between)
