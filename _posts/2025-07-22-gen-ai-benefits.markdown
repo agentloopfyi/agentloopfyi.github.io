@@ -61,3 +61,4 @@ Better
 ✨ **Read more...**
 
 - [Tobias Zwingmann's post](https://blog.tobiaszwingmann.com/p/ai-workflows-vs-ai-agents-vs-everything-in-between)
+- [Tobias Zwingmann's another post](https://blog.tobiaszwingmann.com/p/ai-agent-vs-ai-workflows)
