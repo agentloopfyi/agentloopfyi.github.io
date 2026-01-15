@@ -8,6 +8,8 @@ comment: false
 
 I am collecting some awesome AI, math and related content from blogs, websites, YouTube, etc!
 
+- [Mathematical Foundations of Machine Learning by Prathosh A P, IISc Bangalore](https://www.youtube.com/watch?v=G2h7nD_Stxg&list=PLgMDNELGJ1Cay-Q9Cn8KcpUcC58NDWuiu&index=4)
+
 - [Stanford CME 295](https://cme295.stanford.edu/syllabus/)
 
 - [Deep Learning by Professor Bryce](https://www.youtube.com/watch?v=DrhJLHiia7g&list=PLgPbN3w-ia_PeT1_c5jiLW3RJdR7853b9)
@@ -30,7 +32,7 @@ I am collecting some awesome AI, math and related content from blogs, websites, 
 
 - [Natural Language Processing and LLMs by SerranoAcademy](https://www.youtube.com/watch?v=OxCpWwDCDFQ&list=PLs8w1Cdi-zvYskDS2icIItfZgxclApVLv)
 
-- [Generative AI 2025 - IIT Madras & Prathosh AP](https://www.youtube.com/playlist?list=PLZ2ps__7DhBa5xCmncgH7kPqLqMBq7xlu)
+- [Generative AI 2025 - IIT Madras & Prathosh A P](https://www.youtube.com/playlist?list=PLZ2ps__7DhBa5xCmncgH7kPqLqMBq7xlu)
 
 - [Deep Dive into LLMs like ChatGPT - Andrej Karpathy](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=3790s)
 
