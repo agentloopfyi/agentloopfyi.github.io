@@ -194,7 +194,7 @@ Your output must be the exact report only; NO additional sentences, follow-up qu
 
 llm_response = get_deep_research_agent().invoke(
   {  
-    "messages": [HumanMessage(content=DEEP_RESEARCH_PROMPT.format(input=state["input"])]    
+    "messages": [HumanMessage(content=DEEP_RESEARCH_PROMPT.format(input=state["input"]))]    
   }
 )
 ```
