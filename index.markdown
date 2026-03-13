@@ -16,5 +16,5 @@ Having spent 12+ years in the industry, I currently work as an AI Solution Archi
 
 **Academic credentials:**
 - Completed an online program in reinforcement learning from IISc Bangalore (2025)
-- Postgrad in Finance, management from AIMA New Delhi (2025)
+- Postgraduate Diploma in Management, Finance, AIMA New Delhi (2025)
 - BTech in Computer Science and Engineering from West Bengal University of Technology, Kolkata (2013)
