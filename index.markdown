@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img class="face-img" src="{{ " /assets/1761312709833.jpg" | prepend: site.baseurl }}" />
+<img class="face-img" src="{{ " /assets/1761312709833.png" | prepend: site.baseurl }}" />
 
 Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">Saurav</a>, writing my opinionated views here, on things I am interested in, mostly,Interested in distributed systems, data-intensive applications and agentic AI, and (the hard and soft skills of) software engineering.
 
