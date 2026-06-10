@@ -8,6 +8,8 @@ comment: false
 
 I am collecting some awesome AI, math and related content from blogs, websites, YouTube, etc!
 
+- [How to select a vector database](https://raunaqness.substack.com/p/vector-databases-for-rag) by Raunaq ([@raunaqness](https://substack.com/@raunaqness) on substack).
+
 - [Mathematical Foundations of Machine Learning by Prathosh A P, IISc Bangalore](https://www.youtube.com/watch?v=G2h7nD_Stxg&list=PLgMDNELGJ1Cay-Q9Cn8KcpUcC58NDWuiu&index=4)
 
 - [Stanford CME 295](https://cme295.stanford.edu/syllabus/)
