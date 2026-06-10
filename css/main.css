@@ -1,14 +1,13 @@
 body {
-  background-image: linear-gradient(to right, rgba(0, 230, 118, 0.15), rgba(61, 43, 31, 0.2), rgba(26, 26, 26, 0.35)), url('bg-tint.png');
+  background-image: linear-gradient(to right, rgba(124, 106, 247, 0.15), rgba(13, 18, 36, 0.6), rgba(10, 14, 26, 0.8)), url('bg-tint.png');
   background-size: cover;
-  color: #1a1a1a;
+  color: #e2e8f0;
   padding: 2em;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  background-color: #f0ece0;
 }
 .title {
     font-family: "Press Start 2P", system-ui;
@@ -16,23 +15,19 @@ body {
     font-style: normal;
 }
 a {
-  text-decoration: none;
-  color: #007a3d;         /* was #00c853 — now WCAG AA on warm bg */
+  text-decoration: none; 
+  color: #7c6af7;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; 
+}
+.center-align {
+    text-align: center;
 }
 .page-title {
     font-size: 1.4em;
     font-weight: 600;
-    color: #006633;        /* was #00e676 — deep forest green, high contrast */
-}
-code {
-  background-color: #1a1a1a !important;
-  color: #00e676 !important;  /* bright green stays — it's on dark bg, fine here */
-}
-.center-align {
-    text-align: center;
+    color: #a89cf9;
 }
 .footer {
     padding-top: 2em;
@@ -40,7 +35,7 @@ code {
 .date {
     font-size: 1em;
     font-family: Consolas, "Courier New", monospace;
-    color: #3d2b1f;
+    color: #94a3b8;
 }
 .face-img {
     border-radius: 50%;
@@ -49,6 +44,10 @@ code {
 }
 pre {
   border-radius: 1em;
+}
+code {
+  background-color: #0d1224 !important;
+  color: #22d3ee !important;
 }
 @media (min-width: 1200px) {
     .container{
