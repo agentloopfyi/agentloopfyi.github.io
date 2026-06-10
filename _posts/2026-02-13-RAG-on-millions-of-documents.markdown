@@ -7,11 +7,6 @@ date:   2026-02-13 10:00:00
 
 # How to build Enterprise Hybrid RAG
 *Article crafted from experience, then written down using AI*
-
-### PostgreSQL · pgvector · BM25/FTS · RRF · Cohere Rerank · GPT-5
-
-#### For 1M+ Document Scale · Python 3.12+ · LangChain LCEL & Pure-Python Approaches
-
 ---
 
 ## Table of Contents
