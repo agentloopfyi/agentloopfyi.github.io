@@ -1,6 +1,6 @@
 body {
-  background-image: linear-gradient(to right, rgba(124, 106, 247, 0.15), rgba(13, 18, 36, 0.6), rgba(10, 14, 26, 0.8)), url('bg-tint.png');
-  background-size: cover;
+  background-color: #353935;
+  background-image: none;
   color: #e2e8f0;
   padding: 2em;
   font-family: "Roboto", sans-serif;
