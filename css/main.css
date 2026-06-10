@@ -16,19 +16,23 @@ body {
     font-style: normal;
 }
 a {
-  text-decoration: none; 
-  color: #00c853;
+  text-decoration: none;
+  color: #007a3d;         /* was #00c853 — now WCAG AA on warm bg */
 }
 a:hover {
-  text-decoration: underline; 
-}
-.center-align {
-    text-align: center;
+  text-decoration: underline;
 }
 .page-title {
     font-size: 1.4em;
     font-weight: 600;
-    color: #00e676;
+    color: #006633;        /* was #00e676 — deep forest green, high contrast */
+}
+code {
+  background-color: #1a1a1a !important;
+  color: #00e676 !important;  /* bright green stays — it's on dark bg, fine here */
+}
+.center-align {
+    text-align: center;
 }
 .footer {
     padding-top: 2em;
@@ -45,10 +49,6 @@ a:hover {
 }
 pre {
   border-radius: 1em;
-}
-code {
-  background-color: #1a1a1a !important;
-  color: #00e676 !important;
 }
 @media (min-width: 1200px) {
     .container{
