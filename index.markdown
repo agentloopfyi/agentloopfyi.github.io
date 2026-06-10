@@ -4,7 +4,7 @@ layout: default
 
 <img class="face-img" src="{{ " /assets/self.png" | prepend: site.baseurl }}" />
 
-Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">Saurav</a>, writing my opinionated views on things I am interested in, mostly on distributed systems, data-intensive applications and agentic AI, and (the hard and soft skills of) software engineering.
+Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">Saurav</a>, writing my opinionated views on things I am interested in, mostly on distributed systems, agentic AI and (the hard and soft skills of) software engineering.
 
 ✨ [Learn AI](/learn-ai) — Collecting some awesome content on AI.
 
@@ -12,7 +12,7 @@ Hi there! I am <a href="https://www.linkedin.com/in/sauravdey" target="_blank">S
 
 ✨ [Deep Research](/deep-research) — Thing's I've learned about agentic deep research.
 
-Having spent 12+ years in the industry, I currently work as an AI Solution Architect, developing AI agents and agentic workflows in deep research for enterprise problems. I specialize in building enterprise software systems and adding decision-making AI.
+Having spent 12+ years in the industry, I currently work as an AI Solution Architect, developing AI agents, agentic workflows and large-scale RAG for enterprise systems.
 
 **Academic credentials:**
 - Completed an online program in reinforcement learning from IISc Bangalore (2025)
