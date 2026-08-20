@@ -1,0 +1,158 @@
+---
+layout: post
+comments: false
+title:  "OWASP Top 10s - All in one post"
+date:   2026-08-19 10:00:00
+---
+# OWASP Top 10 — Reference Guide (Web, LLM, Agentic, Agent Skills, API, Mobile)
+
+*Compiled from official OWASP sources and current secondary coverage, August 2026.*
+
+---
+
+## Summary of Currency
+
+| List | Latest Published |
+|---|---|
+| Web Application Security | **2025** (November 2025) |
+| LLM Applications | **2026** (August 3–4, 2026) |
+| Agentic Applications (ASI) | **2026** (December 9, 2025) |
+| Agentic Skills (AST10) | **2026** — new project, evolving |
+| API Security | **2023** (still current, no 2026 update yet) |
+| Mobile | **2024** (still current, no 2026 update yet) |
+
+---
+
+## 1. Web Application Security — OWASP Top 10:2025
+
+Published November 2025. First update since 2021 (four-year cadence).
+
+| ID | Item | Description | Explanation |
+|---|---|---|---|
+| A01:2025 | Broken Access Control | Maintains its position at #1 as the most serious application security risk; on average 3.73% of tested applications had one or more of the 40 CWEs in this category. | Failure to enforce what an authenticated user is allowed to do (IDOR, missing function-level checks). SSRF was folded into this category in 2025. |
+| A02:2025 | Security Misconfiguration | Insecure defaults, unpatched settings, verbose error pages, open cloud storage. | Jumped from #5 to #2, driven by cloud misconfigurations, open storage, and weak defaults. |
+| A03:2025 | Software Supply Chain Failures | Covers malware in software ecosystems, including malicious packages, compromised maintainers, and tampered build processes. | New category replacing "Vulnerable and Outdated Components"; covers CI/CD, dependencies, and build systems, not just known-CVE libraries. |
+| A04:2025 | Cryptographic Failures | Weak or missing encryption for data at rest and in transit, broken key management. | Formerly "Sensitive Data Exposure"; renamed in 2021 to focus on the root cause. |
+| A05:2025 | Injection | SQL, NoSQL, command, LDAP injection via unsanitized input. | Classic risk, still highly exploitable in poorly parameterized queries. |
+| A06:2025 | Insecure Design | Missing threat modeling and secure design patterns at the architecture stage. | A design-level, not implementation-level, weakness — can't be patched after the fact. |
+| A07:2025 | Authentication Failures | Broken session management, weak credential recovery, credential-stuffing exposure. | Formerly "Identification and Authentication Failures." |
+| A08:2025 | Software or Data Integrity Failures | Code/infrastructure that doesn't verify integrity (unsigned updates, insecure deserialization). | Covers CI/CD pipeline tampering and untrusted plugin/update sources. |
+| A09:2025 | Security Logging and Alerting Failures | Great logging with no alerting is of minimal value in identifying security incidents. | Community-voted into the list; detection/response gaps live here. |
+| A10:2025 | Mishandling of Exceptional Conditions | New category with 24 CWEs focusing on improper error handling, logical errors, failing open, and related abnormal-condition scenarios. | Brand new for 2025 — systems that "fail open" under error states rather than failing safe. |
+
+---
+
+## 2. LLM Applications — OWASP GenAI LLM Top 10 2026
+
+Published August 3–4, 2026, superseding the 2025 edition. First edition to blend a community vote (75% weight) with real incident data (25% weight, drawn from 7,714 reported LLM incidents).
+
+| ID | Item | Description | Explanation |
+|---|---|---|---|
+| LLM01:2026 | Prompt Injection | Untrusted input is interpreted as an instruction rather than data. | Holds #1 for a third straight edition; scope expanded to cover cross-modal attacks, memory persistence, and agentic blast radius. Low incident counts reflect defensive maturity, not declining risk — OWASP calls this the "defense effect." |
+| LLM02:2026 | Sensitive Information Disclosure | Model leaks PII, secrets, or proprietary data through its outputs. | The one entry where vote and incident data fully agree. |
+| LLM03:2026 | Excessive Agency | Model/agent is granted more autonomy, tools, or permissions than the task requires. | Up from #6 — the biggest climb on the list, driven by real-world agentic deployments. Now explicitly cross-referenced to the Agentic Top 10 (ASI). |
+| LLM04:2026 | Supply Chain | Compromised base models, fine-tunes, datasets, or third-party plugins. | Down from #3; now includes artifact-trust failure. |
+| LLM05:2026 | Data and Model Poisoning | Training/fine-tuning data manipulated to bias or backdoor the model. | Down from #4; absorbs fine-tuning subversion. |
+| LLM06:2026 | Unbounded Consumption | Uncontrolled resource/cost usage triggered by crafted or automated requests. | Up from #10; reframed around cost asymmetry and reasoning-model resource drain — attackers can trigger disproportionately expensive computation at negligible cost to themselves. |
+| LLM07:2026 | Misinformation | Confident but false model output that drives downstream decisions. | Up from #9 — the widest gap between community vote and incident data, in the dangerous direction: a fluent wrong answer that drives a tool call becomes a wrong action. |
+| LLM08:2026 | Hidden Context Exposure | Extraction of system prompts, tool schemas, RAG-injected policy text, or other non-user-visible context. | Renamed and expanded from LLM07:2025 "System Prompt Leakage" — now covers any hidden operational context, not just the system prompt. |
+| LLM09:2026 | Vector and Embedding Weaknesses | Poisoned vector stores, cross-tenant leakage, embedding-model manipulation. | Down from #8; scope unchanged. |
+| LLM10:2026 | Improper Output Handling | Unvalidated model output fed into downstream systems, shells, or renderers. | Fell furthest — from #5 to #10 — but scope grew to explicitly cover ANSI/terminal sinks and auto-fetching renderers. |
+
+**Note:** OWASP has drawn an explicit scope boundary — the LLM Top 10 covers the model as a *component* inside an application, while the Agentic Top 10 (below) covers the model as an *actor* with tools, memory, and downstream consequences. The two lists are complementary, not redundant.
+
+---
+
+## 3a. Agentic Applications — OWASP Top 10 for Agentic Applications 2026 (ASI)
+
+First edition, published December 9, 2025.
+
+| ID | Item | Description | Explanation |
+|---|---|---|---|
+| ASI01 | Agent Goal Hijack | Adversary redirects the agent's plan or objective. | E.g. EchoLeak (CVE-2025-32711) — hidden instructions in an email silently redirected an agent to exfiltrate data. Considered the most severe entry because it converts the agent into the attacker's tool. |
+| ASI02 | Tool Misuse & Exploitation | The agent invokes tools in ways they were not authorized for. | Central to any multi-tool agent architecture with a shared tool registry. |
+| ASI03 | Identity & Privilege Abuse | The agent's identity or permissions are misused or escalated. | Agents acting with a human's or a service account's over-broad credentials. |
+| ASI04 | Agentic Supply Chain Vulnerabilities | Third-party tools, frameworks, registries, and agent components carry exposure. | Covers agent-framework dependencies and any third-party MCP servers wired into a system. |
+| ASI05 | Unexpected Code Execution (RCE) | Agent or sandbox boundary fails and arbitrary code runs. | Relevant wherever agents execute generated code. |
+| ASI06 | Memory & Context Poisoning | Persistent memory, retrieval, or context is shaped to mislead future steps. | Applies directly to any agent memory package with episodic retrieval or hierarchical summarization. |
+| ASI07 | Insecure Inter-Agent Communication | Messages between agents are spoofed, replayed, or unauthenticated. | A new risk class with no LLM-Top-10 analogue — relevant to multi-agent handoffs in swarm architectures. |
+| ASI08 | Cascading Failures | An error or compromise in one agent fans out across the system. | One bad agent decision propagating through a large multi-agent program is a systemic, not isolated, risk. |
+| ASI09 | Human-Agent Trust Exploitation | Humans over-trust or are deceived by agent outputs into harmful actions. | E.g. a malicious calendar invite subtly reweighting an agent's objective toward low-friction approval that technically stays within policy but violates business intent. |
+| ASI10 | Rogue Agents | An agent operates outside its intended goal/boundary, whether from compromise or emergent misalignment. | The catch-all for an agent that's neither hijacked from outside nor simply broken, but autonomously acting against intent. |
+
+Built from real 2025 incidents, not projections: EchoLeak proved zero-click data exfiltration, a widely-installed coding assistant compromise weaponized supply-chain trust, and an agent deleted a production database during a code freeze in another documented incident.
+
+---
+
+## 3b. Agent Skills — OWASP Agentic Skills Top 10 (AST10)
+
+New project; first public draft mid-2026. Sits below the ASI list at the "execution layer" — AST10 covers what skills *do*, how they're distributed, and how they can be exploited, distinct from the model layer (LLM Top 10) and the agent-direction layer (ASI). Not yet a stable numbered "AST01–AST10" identifier scheme — items are currently ranked 1–10.
+
+| # | Item | Description | Explanation |
+|---|---|---|---|
+| 1 | Malicious Skills | Attacker-published skills in agent registries that exfiltrate credentials or plant hidden instructions. | A documented campaign published over 1,000 confirmed malicious skills to a public skill registry. |
+| 2 | Supply Chain Compromise | Typosquatting, registry poisoning, dependency hijacking targeting how skills are *distributed*. | Distinct from ASI04 in that it's specific to the skill packaging/distribution layer, not agent tooling generally. |
+| 3 | Over-Privileged Skills | Skills granted more access than the task needs, with no per-skill scoping. | An analysis of over 31,000 skills found roughly 12% had privilege-escalation risks. |
+| 4 | Insecure Metadata | Unverified skill name/description/permissions/risk-level metadata that can be spoofed to impersonate trusted skills. | Analogous to unsigned package metadata in software-package supply-chain attacks. |
+| 5 | Unsafe Deserialization | Skill manifests (YAML/JSON) parsed without validation, enabling code execution. | Real-world CVEs have demonstrated RCE via unsafe YAML parsing in skill configuration. |
+| 6 | Weak Isolation | Skills run with full host access instead of a sandboxed/contained environment. | Compromise blast radius equals whatever the host process can reach. |
+| 7 | Update Drift | Auto-updating skills with no version pinning, so a safe skill can silently become unsafe. | Attackers can use compromised update channels to push malicious versions post-install. |
+| 8 | Poor Scanning | Malicious behavior hidden in natural-language instructions rather than code, evading signature-based scanners. | A scanner catches an explicit shell command; it doesn't catch an instruction phrased as ordinary prose that achieves the same exfiltration. |
+| 9 | No Governance | No org-wide visibility into which skills are installed — shadow AI. | Surveys suggest only a minority of enterprises currently have AI-specific security controls in place. |
+| 10 | Cross-Platform Reuse | Permissions/safeguards defined for one agent platform don't carry over when a skill is reused on another platform. | Attackers exploit the inconsistency to reuse a malicious skill across ecosystems. |
+
+**Core threat model — the "Lethal Trifecta":** access to sensitive data (SSH keys, API credentials, tokens), exposure to untrusted content (skill instructions, memory, documents), and the ability to communicate externally (outbound calls, webhooks) — present simultaneously in most production agent deployments today.
+
+---
+
+## 4. API Security — OWASP API Security Top 10:2023
+
+Still current as of August 2026 — no newer edition released.
+
+| ID | Item | Description | Explanation |
+|---|---|---|---|
+| API1:2023 | Broken Object Level Authorization | APIs tend to expose endpoints that handle object identifiers, creating a wide attack surface of object-level access-control issues. Object-level authorization checks should be applied in every function that accesses a data source using an ID from the user. | #1 since 2019 — the classic "change the ID in the URL/body" IDOR vulnerability. |
+| API2:2023 | Broken Authentication | Authentication mechanisms are often implemented incorrectly, allowing attackers to compromise tokens or exploit implementation flaws to assume other users' identities. | Covers weak JWT handling, credential stuffing, token replay. |
+| API3:2023 | Broken Object Property Level Authorization | Combines the old "Excessive Data Exposure" and "Mass Assignment" categories, focusing on the lack of authorization validation at the object *property* level. | E.g. an API that returns whole objects including internal fields, or accepts client-supplied fields it shouldn't (like an admin flag). |
+| API4:2023 | Unrestricted Resource Consumption | Successful attacks can lead to denial of service or increased operational costs, since satisfying API requests requires network bandwidth, CPU, memory, and storage. | Direct analogue of LLM06:2026 Unbounded Consumption, applied to conventional APIs. |
+| API5:2023 | Broken Function Level Authorization | Complex access-control policies with different hierarchies, groups, and roles, and unclear separation between administrative and regular functions, tend to lead to authorization flaws. | A normal user calling an admin-only endpoint because the server only checks login state, not role. |
+| API6:2023 | Unrestricted Access to Sensitive Business Flows | APIs vulnerable to this risk expose a business flow — such as buying a ticket or posting a comment — without compensating for how the functionality could be harmed if used excessively in an automated manner. | Business-logic abuse (scalping, spam) rather than a technical bug. |
+| API7:2023 | Server Side Request Forgery | SSRF flaws occur when an API fetches a remote resource without validating the user-supplied URI, letting an attacker coerce the app into sending a crafted request to an unexpected destination. | Relevant to any service or tool that fetches URLs on a caller's behalf. |
+| API8:2023 | Security Misconfiguration | APIs and their supporting systems typically contain complex configurations meant to enable customization; engineers can miss them or skip security best practices. | Same theme as web A02:2025, API-specific. |
+| API9:2023 | Improper Inventory Management | APIs tend to expose more endpoints than traditional web applications, making accurate documentation and host/version inventory important to avoid deprecated or exposed debug endpoints. | The "shadow API" / zombie API problem. |
+| API10:2023 | Unsafe Consumption of APIs | Developers tend to trust data received from third-party APIs more than user input; attackers go after integrated third-party services instead of the target API directly. | An indirect trust chain becomes the weak link. |
+
+---
+
+## 5. Mobile — OWASP Mobile Top 10 2024
+
+Final release; still current as of August 2026. First update since 2016.
+
+| ID | Item | Description | Explanation |
+|---|---|---|---|
+| M1:2024 | Improper Credential Usage | Hardcoded API keys/secrets and insecure runtime credential handling in the mobile app binary. | New #1 for 2024 — reflects how often secrets end up recoverable in shipped app binaries. |
+| M2:2024 | Inadequate Supply Chain Security | Vulnerabilities introduced via third-party SDKs, libraries, or build tooling. | Mobile-specific instance of the same supply-chain theme seen across the other lists. |
+| M3:2024 | Insecure Authentication/Authorization | Weak session/token handling on the client, bypassable local authentication (e.g. biometric spoofing). | Merges the previously separate "Insecure Authentication" and "Insecure Authorization" 2016 categories. |
+| M4:2024 | Insufficient Input/Output Validation | Missing validation on data entering or leaving the app (deep links, inter-process communication, clipboard). | New category for 2024 — covers injection-style issues specific to mobile input surfaces. |
+| M5:2024 | Insecure Communication | Weak TLS configuration, cleartext traffic, certificate-pinning bypass. | Dropped from #3 (2016) to #5 — still critical, but better understood industry-wide now. |
+| M6:2024 | Inadequate Privacy Controls | Over-collection or mishandling of personal data, permissions overreach. | New category reflecting growing privacy-regulation pressure. |
+| M7:2024 | Insufficient Binary Protections | Missing obfuscation, anti-tamper, and anti-debugging controls. | Absorbs the old "Code Tampering" category and part of "Reverse Engineering" from 2016. |
+| M8:2024 | Security Misconfiguration | Renamed from "Extraneous Functionality" (2016's M10) — debug flags and exposed dev endpoints left in production builds. | Moved from M10 to M8, i.e. ranked more severe than in 2016. |
+| M9:2024 | Insecure Data Storage | Sensitive data stored unencrypted in local storage, shared preferences, or app sandboxes. | Dropped from #2 (2016) to #9 — still real, but no longer the top concern. |
+| M10:2024 | Insufficient Cryptography | Weak algorithms, improper key management, custom crypto implementations. | Dropped furthest, from #5 to #10, reflecting broader adoption of platform-provided crypto APIs. |
+
+---
+
+## How the Lists Relate
+
+```
+Web Top 10 (2025) ─────────── general web application risk (any app, any layer)
+API Top 10 (2023) ─────────── API-specific slice of the same risk surface
+Mobile Top 10 (2024) ───────── client-side/mobile-specific slice
+
+LLM Top 10 (2026) ─────────── the model as a COMPONENT inside an application
+Agentic Top 10 / ASI (2026) ── the model as an ACTOR: tools, memory, multi-agent
+Agentic Skills Top 10 (AST10) ─ the execution layer: what installed skills do
+```
+
+The LLM and Agentic (ASI) lists are explicitly designed by OWASP as a complementary pair — neither covers the full picture alone, and several entries (LLM03 Excessive Agency, LLM06 Unbounded Consumption) cross-reference the ASI list directly.
