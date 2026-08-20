@@ -8,6 +8,8 @@ comment: false
 
 I am collecting some awesome AI, math and related content from blogs, websites, YouTube, etc!
 
+- [AI Course from IIT Kharagpur offered in 2025](https://www.youtube.com/playlist?list=PLE051420C2068DCB2)
+
 - [How to select a vector database](https://raunaqness.substack.com/p/vector-databases-for-rag) by Raunaq ([@raunaqness](https://substack.com/@raunaqness) on substack).
 
 - [Mathematical Foundations of Machine Learning by Prathosh A P, IISc Bangalore](https://www.youtube.com/watch?v=G2h7nD_Stxg&list=PLgMDNELGJ1Cay-Q9Cn8KcpUcC58NDWuiu&index=4)
