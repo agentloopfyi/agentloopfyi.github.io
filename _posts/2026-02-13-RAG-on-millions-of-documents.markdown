@@ -4,10 +4,9 @@ comments: false
 title:  "RAG on Millions of documents"
 date:   2026-02-13 10:00:00
 ---
-
 # How to build Enterprise Hybrid RAG
-*Article crafted from experience, then written down using AI*
----
+
+_AI generated article, crafted using Claude as per my own implementation experience_
 
 ## Table of Contents
 
