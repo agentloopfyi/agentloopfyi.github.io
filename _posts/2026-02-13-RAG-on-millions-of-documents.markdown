@@ -6,7 +6,7 @@ date:   2026-02-13 10:00:00
 ---
 # How to build Enterprise Hybrid RAG
 
-_AI generated article, crafted using Claude as per my own implementation experience_
+⚠️ _AI generated article, crafted using Claude as per my own implementation experience_
 
 ## Table of Contents
 
