@@ -6,8 +6,6 @@ date:   2026-05-30 10:00:00
 ---
 # Memory Architecture, Working Memory Management & Summarization in Agentic AI Systems
 
----
-
 _AI generated article, crafted using Claude as per my own implementation experience_
 
 ## 1. Memory Architecture
