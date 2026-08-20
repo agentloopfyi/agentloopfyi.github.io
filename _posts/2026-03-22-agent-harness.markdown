@@ -10,7 +10,7 @@ date:   2026-03-22 10:00:00
 >
 > **What this is not.** A tutorial for a specific framework. The pseudocode is language-agnostic — translate it to Python, TypeScript, Go, or whatever your stack uses.
 
-_AI generated article, crafted using Claude as per my own implementation experience_
+⚠️ _AI generated article, crafted using Claude as per my own implementation experience_
 
 ## Table of Contents
 
