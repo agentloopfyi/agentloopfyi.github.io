@@ -26,7 +26,7 @@ th {
 
 *Compiled from official OWASP sources and current secondary coverage, August 2026.*
 
-_AI generated article, crafted using Claude as per my own understanding of OWASP and security_
+⚠️ _AI generated article, crafted using Claude as per my own understanding of OWASP and security_
 
 ---
 
