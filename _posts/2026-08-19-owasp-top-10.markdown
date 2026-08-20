@@ -4,6 +4,23 @@ comments: false
 title:  "OWASP Top 10s - All in one post"
 date:   2026-08-19 10:00:00
 ---
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
+
 # OWASP Top 10 — Reference Guide (Web, LLM, Agentic, Agent Skills, API, Mobile)
 
 *Compiled from official OWASP sources and current secondary coverage, August 2026.*
